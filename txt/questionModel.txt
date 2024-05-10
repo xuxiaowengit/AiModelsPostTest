@@ -1,0 +1,31 @@
+Determine if it is relevant to the Battery business, Energy Storage Business, ESS product, 
+UPS uninterruptible power supply, telecom tower, or PV Solar business.If it is relevant, reply with 1; 
+if not, Reply only: 1+ identification probability value; If not, return to 0+ probability value,no analysis or explanation is needed.
+text is:Title: Guangdong Wic-power New Energy Co., Ltd,,,Markdown Content:,Shenzhen Wic-power New Energy co.,Ltd is the subsidiary company of Mic-power, Wic-power has been focusing on home battery energy system, industrial and commercial high voltage system,advanced automatic assembly line, experienced team committed to providing first-class products and services.,,Guangdong Mic-power New Energy co.,Ltd is a leading solutions provider of small lithium polymer rechargeable batteries used in smart wearable and TWS-class audio devices.,,Mic-power is a technology-driven company striving to provide the world,s most advanced rechargeable batteries. We hold a portfolio of patents for our standard battery models, which include coin cell, cylindrical cell, pin cell and surface mount technology cell batteries. Our fully automated manufacturing infrastructure can produce 500,000 batteries per day while ensuring quality through automation and testing, our sales value is the No.1 in China, No. 2 in the world.,,Guangdong Wic-power New Energy Co.,Ltd.,
+
+
+Determine if it is relevant to the Battery business, Energy Storage Business, ESS product, 
+UPS uninterruptible power supply, telecom tower, or PV Solar business.If it is relevant, reply with 1; 
+if not, Reply only:If relevant, only reply :1+(analyze the correct probability value); If not, return to 0+(analyze the correct probability value),
+no analysis or explanation is needed.
+text is:
+Title: Guangdong Wic-power New Energy Co., Ltd,,,Markdown Content:,Shenzhen Wic-power New Energy co.,Ltd is the subsidiary company of Mic-power, Wic-power has been focusing on home battery energy system, industrial and commercial high voltage system,advanced automatic assembly line, experienced team committed to providing first-class products and services.,,Guangdong Mic-power New Energy co.,Ltd is a leading solutions provider of small lithium polymer rechargeable batteries used in smart wearable and TWS-class audio devices.,,Mic-power is a technology-driven company striving to provide the world,s most advanced rechargeable batteries. We hold a portfolio of patents for our standard battery models, which include coin cell, cylindrical cell, pin cell and surface mount technology cell batteries. Our fully automated manufacturing infrastructure can produce 500,000 batteries per day while ensuring quality through automation and testing, our sales value is the No.1 in China, No. 2 in the world.,,Guangdong Wic-power New Energy Co.,Ltd.,
+
+
+Determine if it is relevant to the Battery business, Energy Storage Business, ESS product, 
+UPS uninterruptible power supply, telecom tower, or PV Solar business.If it is relevant,  reply only with 1\(accuracy); 
+if not,only return  0\(accuracy),
+no analysis or explanation is needed.
+text is:
+
+Title: Guangdong Wic-power New Energy Co., Ltd,,,Markdown Content:,Shenzhen Wic-power New Energy co.,Ltd is the subsidiary company of Mic-power, Wic-power has been focusing on home battery energy system, industrial and commercial high voltage system,advanced automatic assembly line, experienced team committed to providing first-class products and services.,,Guangdong Mic-power New Energy co.,Ltd is a leading solutions provider of small lithium polymer rechargeable batteries used in smart wearable and TWS-class audio devices.,,Mic-power is a technology-driven company striving to provide the world,s most advanced rechargeable batteries. We hold a portfolio of patents for our standard battery models, which include coin cell, cylindrical cell, pin cell and surface mount technology cell batteries. Our fully automated manufacturing infrastructure can produce 500,000 batteries per day while ensuring quality through automation and testing, our sales value is the No.1 in China, No. 2 in the world.,,Guangdong Wic-power New Energy Co.,Ltd.,
+
+
+
+
+Determine if it is relevant to the Battery business, Energy Storage Business, ESS product, 
+UPS uninterruptible power supply, telecom tower, or PV Solar business.If it is relevant,  reply only with 1\(accuracy); 
+if not,only return  0\(accuracy),
+no analysis or explanation is needed.
+text is:
+Title: Guangdong Wic-power New Energy Co., Ltd,,,Markdown Content:,Shenzhen Wic-power New Energy co.,Ltd is the subsidiary company of Mic-power, Wic-power has been focusing on home battery energy system, industrial and commercial high voltage system,advanced automatic assembly line, experienced team committed to providing first-class products and services.,,Guangdong Mic-power New Energy co.,Ltd is a leading solutions provider of small lithium polymer rechargeable batteries used in smart wearable and TWS-class audio devices.,,Mic-power is a technology-driven company striving to provide the world,s most advanced rechargeable batteries. We hold a portfolio of patents for our standard battery models, which include coin cell, cylindrical cell, pin cell and surface mount technology cell batteries. Our fully automated manufacturing infrastructure can produce 500,000 batteries per day while ensuring quality through automation and testing, our sales value is the No.1 in China, No. 2 in the world.,,Guangdong Wic-power New Energy Co.,Ltd.,
