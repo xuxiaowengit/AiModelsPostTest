@@ -2,24 +2,6 @@
 const XLSX = require('xlsx');
 const fs = require('fs').promises; // 使用 fs 的 promises API  
 
-// 封装写入Excel文件的函数  
-// function writeToExcel(data, workbookName) {
-//     // 创建一个新的工作簿  
-//     const workbook = XLSX.utils.book_new();
-
-//     // 假设数据是一个二维数组  
-//     // 转换数据为工作表  
-//     const worksheet = XLSX.utils.aoa_to_sheet(data);
-
-//     // 添加工作表到工作簿  
-//     XLSX.utils.book_append_sheet(workbook, worksheet, workbookName);
-
-//     // 将工作簿写入文件  
-//     XLSX.writeFile(workbook, workbookName);
-
-//     console.log(`Excel文件 ${workbookName} 已生成！`);
-// }
-
 
 
 // const fs = require('fs');

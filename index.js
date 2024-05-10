@@ -26,8 +26,9 @@ const fs = require('fs');
 var year = today.getFullYear();
 var month = (today.getMonth() + 1).toString().padStart(2, '0'); // getMonth() 返回的月份是从 0 开始的，所以需要加 1，并用 padStart 填充前导零  
 var day = today.getDate().toString().padStart(2, '0'); // getDate() 返回的是日期，不需要加 1
+var hours = today.getHours();
 var fullDate = year + '-' + month + '-' + day;
-var dayHour;
+var dayHour = year + '-' + month + '-' + day + "-" + hours;;
 var nowTime;
 
 // 定义一个函数来更新和打印毫秒数  
@@ -38,7 +39,7 @@ function updateMilliseconds() {
     year = today.getFullYear();
     month = (today.getMonth() + 1).toString().padStart(2, '0'); // getMonth() 返回的月份是从 0 开始的，所以需要加 1，并用 padStart 填充前导零  
     day = today.getDate().toString().padStart(2, '0'); // getDate() 返回的是日期，不需要加 1
-    var hours = today.getHours();
+    hours = today.getHours();
     var minutes = today.getMinutes();
     var seconds = today.getSeconds();
     var milliseconds = today.getMilliseconds();
@@ -81,7 +82,8 @@ function main() { //主方法
     var url2;
     (async () => {
         try {
-            const filePath = "./txt/测试数据.xls"; // 替换为你的Excel文件路径
+            // const filePath = "./txt/测试数据.xls"; // 替换为你的Excel文件路径
+            const filePath = "./txt/第二批测试数据.xlsx"; // 替换为你的Excel文件路径
             const data = await readExcelFile(filePath);
             console.log("表格数据:", data[0], data.length); // 输出Excel表格中的数据
             url2 = data[0][1]
@@ -93,12 +95,18 @@ function main() { //主方法
                 appendToExcel(outfilePath, worksheetName, excledata); //把处理完成的结果追加到表格
                 today = new Date();
                 milliseconds = today.getMilliseconds();
-                createExcelFile(Failed, './outFile/首轮识别失败记录.xlsx', dayHour); //写出失败记录
-                generateLog(logFilePath, "全部处理完,程序退出！" + `--${nowTime}`);
+                // console.log("dayHour:", dayHour)
+                if (Failed.length !== 0) {
+                    createExcelFile(Failed, './outFile/首轮识别失败记录.xlsx', dayHour); //写出失败记录
+                    generateLog(logFilePath, "全部处理完,程序退出！" + `--${nowTime}`);
+                } else {
+                    console.log('首轮识别没有失败，数组为空！');
+                }
+
                 process.exit() //结束程序
             }, url2);
         } catch (error) {
-            console.error("Error reading Excel file:", error);
+            console.error("Error reading Excel file:"); //错误太长error
             today = new Date();
             milliseconds = today.getMilliseconds();
             generateLog(logFilePath, "Error reading Excel file:" + `${error}` + `--${nowTime}`);
@@ -114,12 +122,12 @@ function iterateArray(array, callback, url2) {
     let index = 0;
 
     function next() {
-        if (index < array.length - 100) {
-            console.log("长度：", array.length, url2)
+        if (index < array.length - 542) {
+            console.log("待处理总数量：", array.length, url2)
             getJinaApi(array[index], () => {
                 index++;
                 next();
-            }, array[index][1], index);
+            }, array[index][1], index, array[index]);
         } else {
             callback();
         }
@@ -132,36 +140,45 @@ function iterateArray(array, callback, url2) {
 
 
 // 获取过滤的网页内容
-function getJinaApi(item, callback, url2, index) {
+function getJinaApi(item, callback, url2, index, item) {
     // 使用GET请求url1+url2
     var url3 = url1 + url2;
-    console.log('开始处理第:', index, '网站,\nUrl3:', url3)
+    console.log('开始处理第:', index + 1, '网站,Url3:', url3)
     httpClient.get(url3, { null: "" })
         .then((data) => {
-            // 假设你有一个包含换行符的字符串
-            let text = removeLinesWithURLs(data);
-            // console.log("先去掉url:", text);
-            // 使用正则表达式和replace方法替换换行符为逗号
-            let newText = text.replace(/(\r\n|\n|\r)|[^\x20-\x7E]/gm, ",");
-            // let newText = text.replace(/(\r\n|\n|\r)/gm, ",");
-            // console.log("后去替换空格等符号:", newText);
-            console.log("已完成第", index, "网站获取", item[1])
-            openchatApiPost(newText, item, callback, index);
-            today = new Date();
-            milliseconds = today.getMilliseconds();
-            generateLog(logFilePath, "已完成第" + `${index}` + "网站:" + `${item[1]}` + "获取" + `--${nowTime}`);
+            if (data != "") {
+                let text = removeLinesWithURLs(data);
+                // 使用正则表达式和replace方法替换换行符为逗号
+                let newText = text.replace(/(\r\n|\n|\r)|[^\x20-\x7E]/gm, ",");
+                // console.log("后去替换空格等符号:", newText);
+                console.log("已完成第", index + 1, "网站获取", item[1])
+                openchatApiPost(newText, item, callback, index);
+                today = new Date();
+                milliseconds = today.getMilliseconds();
+                generateLog(logFilePath, "已完成第" + `${index + 1}` + "网站:" + `${item[1]}` + "获取" + `--${nowTime}`);
+            } else {
+                today = new Date();
+                milliseconds = today.getMilliseconds();
+                generateLog(logFilePath, "jina.ai接口请求返回格式异常数据," + `--${nowTime}`);
+            }
 
         })
         .catch((error) => {
-            console.error("jina.ai接口请求失败:", error);
+            var array3 = [];
+            console.error("jina.ai接口请求失败:", item); //error 太长不要打印
             today = new Date();
             milliseconds = today.getMilliseconds();
-            generateLog(logFilePath, "jina.ai接口请求失败" + `${error}` + `--${nowTime}`);
+            generateLog(logFilePath, "jina.ai接口请求失败," + `${error}` + `--${nowTime}`);
+            // 异常的数据加入另外表格临时缓存
+            array3.splice(0, 0, item[0]);
+            array3.splice(1, 0, url2);
+            array3.splice(2, 0, item[2]);
+            array3.splice(3, 0, item[3]);
+            array3.splice(4, 0, 'jinaAPI请求失败!');
+            Failed.push(array3);
             callback();
         });
 }
-
-
 
 
 
@@ -179,9 +196,10 @@ function openchatApiPost(text, item, callback, index) {
 
 
     // 你的 API 密钥和模型 API 终点（如果需要的话，可以在这里覆盖默认值）  
-    const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2YTlmOTg2LWY5NWYtNDAxNi05OGU5LTQ1Y2I4YjgxZDZjYiJ9.IwWmITyTdNWIWFBBGWP1C0WmlICstTvYRqSoVvCpnWk';
+    const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1YTBlMjIzLWQ0ZGYtNGFkNC1iZjBlLTA3OWIyMTUxYmU5YiJ9.S95yOdHFmevutvd7_w81hBJjA2kKlnAQCdG0b7VwW7s';
     // const modelEndpoint = 'http://127.0.0.1:11435/v1/chat/completions';
-    const modelEndpoint = 'http://192.168.1.254:11433/v1/chat/completions';
+    const modelEndpoint = 'http://127.0.0.1:11434/v1/chat/completions';
+    // const modelEndpoint = 'http://192.168.1.254:11433/v1/chat/completions'; //254 内必须映射11434到11433，ollama不直接对127.0.0.1之外的来访者提供服务
 
     // 输入文本  
     var inputText = qusetion + text;
@@ -194,11 +212,11 @@ function openchatApiPost(text, item, callback, index) {
             // 注意：'choices' 和 'message' 取决于实际 API 响应结构  
             if (response.choices && response.choices[0].message) {
                 console.log("分析结果：", JSON.stringify(response.choices[0].message, null, 2));
-                console.log("已完成第", index, "网站", item[1] + "分析");
+                console.log("已完成第", index + 1, "网站", item[1] + "分析");
                 // console.log("excelData:", excelData)
                 today = new Date();
                 milliseconds = today.getMilliseconds();
-                generateLog(logFilePath, "已完成第" + `${index}` + "网站:" + `${item[1]}` + "分析" + `--${nowTime}`);
+                generateLog(logFilePath, "已完成第" + `${index + 1}` + "网站:" + `${item[1]}` + "分析" + `--${nowTime}`);
                 var array = [],
                     array2 = [];
                 array.splice(0, 0, item[0]);
@@ -224,7 +242,7 @@ function openchatApiPost(text, item, callback, index) {
                     array2.splice(1, 0, item[1]);
                     array2.splice(2, 0, item[2]);
                     array2.splice(3, 0, item[3]);
-                    array2.splice(4, 0, item[4]);
+                    array2.splice(4, 0, '首轮识别失败！'); //取代原来的是非显示
                     Failed.push(array2);
                     console.log("Failed:", Failed);
 
@@ -241,7 +259,7 @@ function openchatApiPost(text, item, callback, index) {
                 milliseconds = today.getMilliseconds();
                 generateLog(logFilePath, '当次openchatAPI返回的数据不含预期的格式结构!:' + `${response.choices[0].message}` + `--${nowTime}`);
             }
-            const processingTime = Math.random() * 1000;
+            const processingTime = Math.random() * 2000;
 
             setTimeout(() => {
                 console.log(` 分析 ${item[1]} 延时 ${processingTime} ms`);
@@ -261,13 +279,11 @@ function openchatApiPost(text, item, callback, index) {
                 callback();
             }, processingTime);
 
-        })
-
-        .catch(error => {
-            console.error('Error interacting with ChatGPT:', error)
+        }).catch(error => {
+            console.error('Error interacting with openChat:', error)
             today = new Date();
             milliseconds = today.getMilliseconds();
-            generateLog(logFilePath, 'Error interacting with ChatGPT' + `${error}` + `--${nowTime}`);
+            generateLog(logFilePath, 'Error interacting with openChatAPI' + `${error}` + `--${nowTime}`);
             callback();
         });
 }
