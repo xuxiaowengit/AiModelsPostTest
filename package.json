@@ -4,11 +4,11 @@
   "description": "ai模型测试post请求",
   "main": "post.js",
   "scripts": {
-    "test": "node post.js"
+    "test": "node index.js"
   },
   "repository": {
-    "type": "git",
-    "url": "https://gitee.com/xuxiaowengit/web-search-openchat-ai-check-website-type.git"
+    "type": "github",
+    "url": "https://github.com/xuxiaowengit/AiModelsPostTest.git"
   },
   "keywords": [
     "git",
@@ -18,9 +18,9 @@
   "author": "jeking",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitee.com/xuxiaowengit/web-search-openchat-ai-check-website-type.git"
+    "url": "https://github.com/xuxiaowengit/AiModelsPostTest/issues"
   },
-  "homepage": "https://gitee.com/xuxiaowengit/web-search-openchat-ai-check-website-type.git",
+  "homepage": "https://github.com/xuxiaowengit/AiModelsPostTest#readme",
   "dependencies": {
     "axios": "^1.6.8",
     "node-fetch": "^3.3.2",
