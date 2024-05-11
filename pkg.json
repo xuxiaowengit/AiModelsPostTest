@@ -1,0 +1,22 @@
+{
+    "name": "WICPOWER-AI-DAS",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "bin": "index.js",
+    "targets": [
+        "node14-win-x64"
+    ],
+    "files": [
+        "log/*",
+        "node_modules/*",
+        "outFile/*",
+        "txt/*",
+        "*.js",
+        "*.json"
+    ],
+    "pkg": {
+        "output": "/outExe/WICPOWER-AI-DAS.exe"
+    }
+}

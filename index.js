@@ -97,12 +97,13 @@ function main() { //主方法
                 milliseconds = today.getMilliseconds();
                 // console.log("dayHour:", dayHour)
                 if (Failed.length !== 0) {
-                    createExcelFile(Failed, './outFile/首轮识别失败记录.xlsx', dayHour); //写出失败记录
+                    // createExcelFile(Failed, './outFile/首轮识别失败记录.xlsx', dayHour); //写出失败记录
+                    appendToExcel('./outFile/首轮识别失败记录.xlsx', dayHour, Failed); //写出失败记录
                     generateLog(logFilePath, "全部处理完,程序退出！" + `--${nowTime}`);
                 } else {
                     console.log('首轮识别没有失败，数组为空！');
                 }
-
+                console.log('全部处理完,程序退出');
                 process.exit() //结束程序
             }, url2);
         } catch (error) {
@@ -122,7 +123,7 @@ function iterateArray(array, callback, url2) {
     let index = 0;
 
     function next() {
-        if (index < array.length - 542) {
+        if (index < array.length - 540) {
             console.log("待处理总数量：", array.length, url2)
             getJinaApi(array[index], () => {
                 index++;
@@ -198,15 +199,19 @@ function openchatApiPost(text, item, callback, index) {
     // 你的 API 密钥和模型 API 终点（如果需要的话，可以在这里覆盖默认值）  
     const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1YTBlMjIzLWQ0ZGYtNGFkNC1iZjBlLTA3OWIyMTUxYmU5YiJ9.S95yOdHFmevutvd7_w81hBJjA2kKlnAQCdG0b7VwW7s';
     // const modelEndpoint = 'http://127.0.0.1:11435/v1/chat/completions';
-    const modelEndpoint = 'http://127.0.0.1:11434/v1/chat/completions';
-    // const modelEndpoint = 'http://192.168.1.254:11433/v1/chat/completions'; //254 内必须映射11434到11433，ollama不直接对127.0.0.1之外的来访者提供服务
+    // const modelEndpoint = 'http://127.0.0.1:11434/v1/chat/completions';
+    // const modelEndpoint = 'http://localhost:11434/api/generate';
+    // const modelEndpoint = 'http://wk2m6ujhui.tcp01.cn/v1/chat/completions';
+    const modelEndpoint = 'http://192.168.1.254:11433/v1/chat/completions'; //254 内必须映射11434到11433，ollama不直接对127.0.0.1之外的来访者提供服务
 
     // 输入文本  
     var inputText = qusetion + text;
     // console.log(inputText)
-
+    const modelName = 'openchat:7b-v3.5-q6_K';
+    // const modelName = 'openchat:7b-v3.5-1210';
+    // const modelName = 'llama3';
     // 调用函数并处理响应  
-    interactWithChatGPT(inputText, apiKey, modelEndpoint)
+    interactWithChatGPT(inputText, apiKey, modelEndpoint, modelName)
         .then(response => {
             // console.log(response);
             // 注意：'choices' 和 'message' 取决于实际 API 响应结构  
@@ -297,7 +302,7 @@ const worksheetData = [
 ];
 
 
-// 本地表文件存在否
+// 本地处理结果表文件存在否
 if (fs.existsSync(outfilePath)) {
     console.log("表已经存在", worksheetName);
     const workbook = XLSX.readFile(outfilePath); // 替换为你的工作簿路径
@@ -320,9 +325,7 @@ if (fs.existsSync(outfilePath)) {
         generateLog(logFilePath, '工作表在,表名不存在,新建立工作表' + `--${nowTime}`);
     }
 
-
 } else {
-
     console.log("表格不存在");
     // 调用函数创建 Excel 文件  创建新表
     createExcelFile(worksheetData, outfilePath, worksheetName);
@@ -332,4 +335,46 @@ if (fs.existsSync(outfilePath)) {
     // 主函数
 }
 
+
+const outfilePath2 = './outFile/首轮识别失败记录.xlsx';
+const worksheetName2 = fullDate;
+const worksheetData2 = [
+    ['邮箱', '网站', '关键词', '相关属性', '判断结论'],
+];
+
+
+// 本地处理异常结果表文件存在否
+if (fs.existsSync(outfilePath2)) {
+    console.log("表2已经存在", worksheetName2);
+    const workbook = XLSX.readFile(outfilePath2); // 替换为你的工作簿路径
+    // 检查是否存在名为 'xxx' 的工作表  
+    const sheetExists = worksheetExists(workbook, worksheetName2);
+    if (sheetExists) {
+        // console.log(`${worksheetName} 是否存在: ${sheetExists}`);
+        console.log("工作表2名存在,数据直接追加到工作表:", worksheetName2)
+    } else {
+        console.log("工作表2在,表名不存在,新建立工作表:", worksheetName2)
+        // 调用模块函数，追加工作表  
+        appendWorksheetToFile(
+            outfilePath2, // 现有工作簿的路径  
+            outfilePath2, // 更新后工作簿的路径  
+            worksheetName2, // 新工作表的名称  
+            worksheetData2 // 新工作表的数据  
+        );
+        today = new Date();
+        milliseconds = today.getMilliseconds();
+        generateLog(logFilePath, '工作表2在,表名不存在,新建立工作表' + `--${nowTime}`);
+    }
+
+} else {
+    console.log("表格2不存在");
+    // 调用函数创建 Excel 文件  创建新表
+    createExcelFile(worksheetData2, outfilePath2, worksheetName2);
+    today = new Date();
+    milliseconds = today.getMilliseconds();
+    generateLog(logFilePath, '表2文件不存在,新建立表文件' + `--${nowTime}`);
+}
+
+
+// 主函数
 main() //启动主方法

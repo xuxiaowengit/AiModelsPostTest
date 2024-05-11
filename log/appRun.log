@@ -1406,3 +1406,175 @@
 2024-05-10T16:51:48.607Z: This is  system log,下面是本次(undefined)邮件发送日志：
 2024-05-10T16:51:53.865Z: 已完成第1网站:http://jelec.com获取--2024-05-11 0-51-53:645ms
 2024-05-10T16:52:03.648Z: 已完成第1网站:http://jelec.com分析--2024-05-11 0-52-2:688ms
+2024-05-10T17:26:42.930Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-10T17:26:47.080Z: 已完成第1网站:http://jelec.com获取--2024-05-11 1-26-46:956ms
+2024-05-10T17:57:58.933Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-10T17:58:07.249Z: 已完成第1网站:http://jelec.com获取--2024-05-11 1-58-6:989ms
+2024-05-10T18:03:13.618Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-10T18:03:16.657Z: 已完成第1网站:http://jelec.com获取--2024-05-11 2-3-15:631ms
+2024-05-10T18:05:37.832Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-10T18:05:42.921Z: 已完成第1网站:http://jelec.com获取--2024-05-11 2-5-41:870ms
+2024-05-10T18:24:57.691Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-10T18:25:01.812Z: 已完成第1网站:http://jelec.com获取--2024-05-11 2-25-1:721ms
+2024-05-10T18:25:02.142Z: Error interacting with openChatAPIError: Failed to interact with ChatGPT: 403 Forbidden--2024-05-11 2-25-1:721ms
+2024-05-10T18:25:04.238Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-11 2-25-3:739ms
+2024-05-10T18:25:04.309Z: Error interacting with openChatAPIError: Failed to interact with ChatGPT: 403 Forbidden--2024-05-11 2-25-3:739ms
+2024-05-10T18:25:32.525Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-10T18:25:36.754Z: 已完成第1网站:http://jelec.com获取--2024-05-11 2-25-36:562ms
+2024-05-10T18:25:48.768Z: Error interacting with openChatAPIReferenceError: responseData is not defined--2024-05-11 2-25-48:645ms
+2024-05-10T18:25:50.362Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-11 2-25-49:648ms
+2024-05-10T18:25:54.236Z: Error interacting with openChatAPIReferenceError: responseData is not defined--2024-05-11 2-25-53:707ms
+2024-05-10T18:25:54.912Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-11 2-25-54:709ms
+2024-05-10T18:26:13.772Z: Error interacting with openChatAPIReferenceError: responseData is not defined--2024-05-11 2-26-12:864ms
+2024-05-10T18:26:17.434Z: 已完成第4网站:http://belden.com获取--2024-05-11 2-26-16:886ms
+2024-05-10T18:26:21.654Z: Error interacting with openChatAPIReferenceError: responseData is not defined--2024-05-11 2-26-20:938ms
+2024-05-10T18:26:53.825Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-10T18:26:55.093Z: 已完成第1网站:http://jelec.com获取--2024-05-11 2-26-54:836ms
+2024-05-10T18:27:00.553Z: 已完成第1网站:http://jelec.com分析--2024-05-11 2-26-59:871ms
+2024-05-10T18:27:03.278Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-11 2-27-2:887ms
+2024-05-10T18:27:07.469Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-11 2-27-6:916ms
+2024-05-10T18:27:09.303Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-11 2-27-8:959ms
+2024-05-10T18:27:30.434Z: 已完成第3网站:http://maspvenergy.com分析--2024-05-11 2-27-30:79ms
+2024-05-10T18:27:33.492Z: 已完成第4网站:http://belden.com获取--2024-05-11 2-27-33:97ms
+2024-05-10T18:27:38.083Z: 已完成第4网站:http://belden.com分析--2024-05-11 2-27-37:103ms
+2024-05-10T18:27:41.282Z: 已完成第5网站:http://upsinverter.com获取--2024-05-11 2-27-41:109ms
+2024-05-10T18:29:29.579Z: 已完成第5网站:http://upsinverter.com分析--2024-05-11 2-29-29:295ms
+2024-05-10T18:29:34.981Z: 已完成第6网站:http://cbesolar.de获取--2024-05-11 2-29-34:301ms
+2024-05-10T18:30:06.216Z: 已完成第6网站:http://cbesolar.de分析--2024-05-11 2-30-5:394ms
+2024-05-10T18:30:10.968Z: 已完成第7网站:http://rockwellautomation.com获取--2024-05-11 2-30-10:402ms
+2024-05-10T18:30:18.796Z: 已完成第7网站:http://rockwellautomation.com分析--2024-05-11 2-30-18:410ms
+2024-05-10T18:30:26.051Z: 已完成第8网站:http://trend-energietechnik.de获取--2024-05-11 2-30-25:419ms
+2024-05-10T18:30:35.529Z: 已完成第8网站:http://trend-energietechnik.de分析--2024-05-11 2-30-35:451ms
+2024-05-10T18:30:40.617Z: 已完成第9网站:http://hoppecke.com获取--2024-05-11 2-30-40:458ms
+2024-05-10T18:30:47.968Z: 已完成第9网站:http://hoppecke.com分析--2024-05-11 2-30-47:470ms
+2024-05-10T18:30:52.324Z: 已完成第10网站:http://electricity-today.com获取--2024-05-11 2-30-51:475ms
+2024-05-10T18:32:23.290Z: 已完成第10网站:http://electricity-today.com分析--2024-05-11 2-32-22:705ms
+2024-05-10T18:32:27.464Z: 已完成第11网站:http://stateofgreen.com获取--2024-05-11 2-32-26:713ms
+2024-05-10T18:32:59.111Z: 已完成第11网站:http://stateofgreen.com分析--2024-05-11 2-32-58:764ms
+2024-05-10T18:33:06.396Z: 已完成第12网站:http://sensata.com获取--2024-05-11 2-33-5:775ms
+2024-05-10T18:33:25.016Z: 已完成第12网站:http://sensata.com分析--2024-05-11 2-33-24:802ms
+2024-05-10T18:33:30.439Z: jina.ai接口请求失败,AxiosError: Request failed with status code 422--2024-05-11 2-33-29:811ms
+2024-05-10T18:33:38.562Z: 已完成第14网站:http://m-battery.nl获取--2024-05-11 2-33-37:823ms
+2024-05-10T18:34:37.418Z: 已完成第14网站:http://m-battery.nl分析--2024-05-11 2-34-36:982ms
+2024-05-10T18:34:41.854Z: jina.ai接口请求失败,AxiosError: Request failed with status code 500--2024-05-11 2-34-40:987ms
+2024-05-10T18:34:51.153Z: 已完成第16网站:http://apsystems.com获取--2024-05-11 2-34-50:997ms
+2024-05-10T18:37:21.867Z: 已完成第16网站:http://apsystems.com分析--2024-05-11 2-37-21:262ms
+2024-05-10T18:37:27.533Z: 已完成第17网站:http://pvenergy.it获取--2024-05-11 2-37-27:314ms
+2024-05-10T19:00:55.398Z: Error interacting with openChatAPITypeError: fetch failed--2024-05-11 3-0-55:353ms
+2024-05-10T23:43:49.378Z: 已完成第18网站:http://saftbatteries.com获取--2024-05-11 7-43-49:281ms
+2024-05-10T23:43:54.486Z: Error interacting with openChatAPITypeError: fetch failed--2024-05-11 7-43-54:392ms
+2024-05-10T23:44:12.768Z: 已完成第19网站:http://mustpower.com获取--2024-05-11 7-44-12:525ms
+2024-05-10T23:44:20.179Z: 已完成第19网站:http://mustpower.com分析--2024-05-11 7-44-19:565ms
+2024-05-10T23:44:33.939Z: 已完成第20网站:http://firestonecompleteautocare.com获取--2024-05-11 7-44-33:614ms
+2024-05-10T23:44:47.648Z: 已完成第20网站:http://firestonecompleteautocare.com分析--2024-05-11 7-44-46:686ms
+2024-05-10T23:44:54.454Z: 已完成第21网站:http://dragonflyenergy.com获取--2024-05-11 7-44-53:728ms
+2024-05-10T23:45:00.313Z: 已完成第21网站:http://dragonflyenergy.com分析--2024-05-11 7-44-59:780ms
+2024-05-10T23:45:04.658Z: 已完成第22网站:http://theblueground.com获取--2024-05-11 7-45-3:815ms
+2024-05-10T23:45:14.332Z: 已完成第22网站:http://theblueground.com分析--2024-05-11 7-45-13:887ms
+2024-05-10T23:45:22.778Z: 已完成第23网站:http://belectric.com获取--2024-05-11 7-45-21:944ms
+2024-05-11T09:11:12.630Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-11T09:11:18.204Z: 已完成第1网站:http://jelec.com获取--2024-05-11 17-11-17:673ms
+2024-05-11T09:11:53.722Z: 已完成第1网站:http://jelec.com分析--2024-05-11 17-11-52:968ms
+2024-05-11T09:11:57.816Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-11 17-11-57:27ms
+2024-05-11T09:11:58.973Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-11 17-11-58:37ms
+2024-05-11T09:12:13.716Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-11 17-12-13:184ms
+2024-05-11T09:13:26.692Z: 已完成第3网站:http://maspvenergy.com分析--2024-05-11 17-13-25:749ms
+2024-05-11T09:13:35.238Z: 已完成第4网站:http://belden.com获取--2024-05-11 17-13-34:837ms
+2024-05-11T09:13:36.094Z: 已完成第4网站:http://belden.com分析--2024-05-11 17-13-35:845ms
+2024-05-11T09:13:45.659Z: 已完成第5网站:http://upsinverter.com获取--2024-05-11 17-13-44:942ms
+2024-05-11T09:13:57.672Z: 已完成第5网站:http://upsinverter.com分析--2024-05-11 17-13-57:43ms
+2024-05-11T09:14:03.084Z: 已完成第6网站:http://cbesolar.de获取--2024-05-11 17-14-3:81ms
+2024-05-11T09:14:08.702Z: 已完成第6网站:http://cbesolar.de分析--2024-05-11 17-14-8:135ms
+2024-05-11T09:14:11.771Z: 已完成第7网站:http://rockwellautomation.com获取--2024-05-11 17-14-11:138ms
+2024-05-11T09:14:12.115Z: 已完成第7网站:http://rockwellautomation.com分析--2024-05-11 17-14-11:138ms
+2024-05-11T09:14:17.507Z: 已完成第8网站:http://trend-energietechnik.de获取--2024-05-11 17-14-17:190ms
+2024-05-11T09:14:19.095Z: 已完成第8网站:http://trend-energietechnik.de分析--2024-05-11 17-14-18:193ms
+2024-05-11T09:14:22.941Z: 已完成第9网站:http://hoppecke.com获取--2024-05-11 17-14-22:239ms
+2024-05-11T09:14:24.307Z: 已完成第9网站:http://hoppecke.com分析--2024-05-11 17-14-24:253ms
+2024-05-11T09:14:27.728Z: 已完成第10网站:http://electricity-today.com获取--2024-05-11 17-14-27:281ms
+2024-05-11T09:14:31.538Z: 已完成第10网站:http://electricity-today.com分析--2024-05-11 17-14-31:308ms
+2024-05-11T09:14:37.647Z: 已完成第11网站:http://stateofgreen.com获取--2024-05-11 17-14-37:344ms
+2024-05-11T09:14:39.174Z: 已完成第11网站:http://stateofgreen.com分析--2024-05-11 17-14-38:347ms
+2024-05-11T09:14:47.864Z: 已完成第12网站:http://sensata.com获取--2024-05-11 17-14-47:429ms
+2024-05-11T09:14:48.801Z: 已完成第12网站:http://sensata.com分析--2024-05-11 17-14-48:435ms
+2024-05-11T09:14:53.105Z: jina.ai接口请求失败,AxiosError: Request failed with status code 422--2024-05-11 17-14-52:474ms
+2024-05-11T09:14:56.861Z: 已完成第14网站:http://m-battery.nl获取--2024-05-11 17-14-56:513ms
+2024-05-11T09:14:59.550Z: 已完成第14网站:http://m-battery.nl分析--2024-05-11 17-14-59:543ms
+2024-05-11T09:15:03.561Z: jina.ai接口请求失败,AxiosError: Request failed with status code 500--2024-05-11 17-15-2:567ms
+2024-05-11T09:15:08.786Z: 已完成第16网站:http://apsystems.com获取--2024-05-11 17-15-8:623ms
+2024-05-11T09:15:15.122Z: 已完成第16网站:http://apsystems.com分析--2024-05-11 17-15-14:679ms
+2024-05-11T09:15:19.426Z: 已完成第17网站:http://pvenergy.it获取--2024-05-11 17-15-18:715ms
+2024-05-11T09:15:19.926Z: 已完成第17网站:http://pvenergy.it分析--2024-05-11 17-15-19:726ms
+2024-05-11T09:15:25.373Z: 已完成第18网站:http://saftbatteries.com获取--2024-05-11 17-15-24:766ms
+2024-05-11T09:15:27.237Z: 已完成第18网站:http://saftbatteries.com分析--2024-05-11 17-15-26:778ms
+2024-05-11T09:15:37.013Z: 已完成第19网站:http://mustpower.com获取--2024-05-11 17-15-36:877ms
+2024-05-11T09:15:37.686Z: 已完成第19网站:http://mustpower.com分析--2024-05-11 17-15-36:877ms
+2024-05-11T09:15:47.515Z: 已完成第20网站:http://firestonecompleteautocare.com获取--2024-05-11 17-15-46:971ms
+2024-05-11T09:15:51.462Z: 已完成第20网站:http://firestonecompleteautocare.com分析--2024-05-11 17-15-50:991ms
+2024-05-11T09:16:03.157Z: 已完成第21网站:http://dragonflyenergy.com获取--2024-05-11 17-16-3:79ms
+2024-05-11T09:16:04.750Z: 已完成第21网站:http://dragonflyenergy.com分析--2024-05-11 17-16-4:83ms
+2024-05-11T09:16:09.429Z: 已完成第22网站:http://theblueground.com获取--2024-05-11 17-16-9:116ms
+2024-05-11T09:16:12.030Z: 已完成第22网站:http://theblueground.com分析--2024-05-11 17-16-11:133ms
+2024-05-11T09:16:20.020Z: 已完成第23网站:http://belectric.com获取--2024-05-11 17-16-19:201ms
+2024-05-11T09:16:22.238Z: 已完成第23网站:http://belectric.com分析--2024-05-11 17-16-22:214ms
+2024-05-11T09:16:42.594Z: 已完成第24网站:http://eastluxenergy.com获取--2024-05-11 17-16-42:366ms
+2024-05-11T09:16:43.743Z: 已完成第24网站:http://eastluxenergy.com分析--2024-05-11 17-16-43:376ms
+2024-05-11T09:16:48.467Z: jina.ai接口请求失败,AxiosError: Request failed with status code 422--2024-05-11 17-16-48:408ms
+2024-05-11T09:16:57.869Z: 已完成第26网站:http://mirasolsolar.com获取--2024-05-11 17-16-57:486ms
+2024-05-11T09:17:05.651Z: 已完成第26网站:http://mirasolsolar.com分析--2024-05-11 17-17-5:571ms
+2024-05-11T09:17:09.591Z: 已完成第27网站:http://energiasolarlevante.com获取--2024-05-11 17-17-8:599ms
+2024-05-11T09:17:11.174Z: 已完成第27网站:http://energiasolarlevante.com分析--2024-05-11 17-17-10:620ms
+2024-05-11T09:17:15.406Z: 已完成第28网站:http://ecotricity.co.uk获取--2024-05-11 17-17-14:666ms
+2024-05-11T09:17:17.268Z: 已完成第28网站:http://ecotricity.co.uk分析--2024-05-11 17-17-16:683ms
+2024-05-11T09:17:25.445Z: 已完成第29网站:http://gestampren.com获取--2024-05-11 17-17-24:750ms
+2024-05-11T09:17:26.224Z: 已完成第29网站:http://gestampren.com分析--2024-05-11 17-17-25:762ms
+2024-05-11T09:17:31.361Z: 已完成第30网站:http://cyb.com.au获取--2024-05-11 17-17-30:810ms
+2024-05-11T09:17:31.978Z: 已完成第30网站:http://cyb.com.au分析--2024-05-11 17-17-31:818ms
+2024-05-11T09:17:37.464Z: 已完成第31网站:http://swe.com获取--2024-05-11 17-17-36:866ms
+2024-05-11T09:17:38.768Z: 已完成第31网站:http://swe.com分析--2024-05-11 17-17-37:875ms
+2024-05-11T09:17:51.237Z: 已完成第32网站:http://electronenergy.com.au获取--2024-05-11 17-17-51:5ms
+2024-05-11T09:17:51.623Z: 已完成第32网站:http://electronenergy.com.au分析--2024-05-11 17-17-51:5ms
+2024-05-11T09:17:56.041Z: 已完成第33网站:http://novelsolar.com获取--2024-05-11 17-17-56:38ms
+2024-05-11T09:17:57.456Z: 已完成第33网站:http://novelsolar.com分析--2024-05-11 17-17-57:47ms
+2024-05-11T09:18:03.963Z: 已完成第34网站:http://batterywale.com获取--2024-05-11 17-18-3:107ms
+2024-05-11T09:18:05.192Z: 已完成第34网站:http://batterywale.com分析--2024-05-11 17-18-5:123ms
+2024-05-11T09:18:12.574Z: 已完成第35网站:http://deltatelecomadvies.nl获取--2024-05-11 17-18-12:187ms
+2024-05-11T09:18:25.847Z: 已完成第35网站:http://deltatelecomadvies.nl分析--2024-05-11 17-18-25:316ms
+2024-05-11T09:18:30.206Z: 已完成第36网站:http://wsengineering.de获取--2024-05-11 17-18-29:359ms
+2024-05-11T09:18:31.320Z: 已完成第36网站:http://wsengineering.de分析--2024-05-11 17-18-30:359ms
+2024-05-11T09:18:37.310Z: 已完成第37网站:http://eonixenergy.com获取--2024-05-11 17-18-36:416ms
+2024-05-11T09:18:39.422Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-11T09:18:43.601Z: 已完成第1网站:http://jelec.com获取--2024-05-11 17-18-43:460ms
+2024-05-11T09:18:44.000Z: 已完成第1网站:http://jelec.com分析--2024-05-11 17-18-43:460ms
+2024-05-11T09:18:48.835Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-11 17-18-48:508ms
+2024-05-11T09:18:49.795Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-11 17-18-49:513ms
+2024-05-11T09:19:05.865Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-11 17-19-5:652ms
+2024-05-11T09:19:08.057Z: 已完成第3网站:http://maspvenergy.com分析--2024-05-11 17-19-7:672ms
+2024-05-11T09:50:51.279Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-11T09:50:51.344Z: 工作表2在,表名不存在,新建立工作表--undefined
+2024-05-11T09:50:56.796Z: 已完成第1网站:http://jelec.com获取--2024-05-11 17-50-56:310ms
+2024-05-11T09:50:56.818Z: Error interacting with openChatAPIError: Failed to interact with ChatGPT: 404 Not Found--2024-05-11 17-50-56:310ms
+2024-05-11T09:50:59.974Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-11 17-50-59:319ms
+2024-05-11T09:50:59.981Z: Error interacting with openChatAPIError: Failed to interact with ChatGPT: 404 Not Found--2024-05-11 17-50-59:319ms
+2024-05-11T09:51:10.114Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-11 17-51-9:357ms
+2024-05-11T09:54:12.956Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-11T09:54:14.528Z: 已完成第1网站:http://jelec.com获取--2024-05-11 17-54-13:969ms
+2024-05-11T09:54:14.548Z: Error interacting with openChatAPIError: Failed to interact with ChatGPT: 404 Not Found--2024-05-11 17-54-13:969ms
+2024-05-11T09:54:15.358Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-11 17-54-14:978ms
+2024-05-11T09:54:15.364Z: Error interacting with openChatAPIError: Failed to interact with ChatGPT: 404 Not Found--2024-05-11 17-54-14:978ms
+2024-05-11T09:54:16.169Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-11 17-54-15:982ms
+2024-05-11T09:59:21.061Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-11T09:59:24.464Z: 已完成第1网站:http://jelec.com获取--2024-05-11 17-59-24:84ms
+2024-05-11T09:59:33.413Z: 已完成第1网站:http://jelec.com分析--2024-05-11 17-59-33:146ms
+2024-05-11T09:59:39.577Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-11 17-59-39:180ms
+2024-05-11T09:59:43.074Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-11 17-59-42:196ms
+2024-05-11T09:59:56.127Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-11 17-59-55:300ms
+2024-05-11T10:00:04.396Z: 已完成第3网站:http://maspvenergy.com分析--2024-05-11 18-0-4:347ms
+2024-05-11T10:01:05.965Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-11T10:01:13.486Z: This is  system log,下面是本次(undefined)邮件发送日志：
+2024-05-11T10:01:14.648Z: 已完成第1网站:http://jelec.com获取--2024-05-11 18-1-14:495ms
+2024-05-11T10:01:18.633Z: 已完成第1网站:http://jelec.com分析--2024-05-11 18-1-18:524ms
+2024-05-11T10:01:20.110Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-11 18-1-19:524ms
+2024-05-11T10:01:23.223Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-11 18-1-22:537ms
+2024-05-11T10:01:24.975Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-11 18-1-24:552ms
+2024-05-11T10:01:33.882Z: 已完成第3网站:http://maspvenergy.com分析--2024-05-11 18-1-33:608ms
