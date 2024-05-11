@@ -16,7 +16,9 @@ const { // 读取表格模块
     readExcelFile
 } = require("./readFile");
 const httpClient = require("./axios");
-const { saveTextToFile } = require('./outFile'); //保存txt模块
+const {
+    saveTextToFile
+} = require('./outFile'); //保存txt模块
 const interactWithChatGPT = require('./chatAPI');
 const fs = require('fs');
 var outfilePath = './outExe/已识别网站记录.xlsx';
@@ -95,7 +97,7 @@ function main() { //主方法
             // 遍历异步调用方法入口
             var myArray = data;
             iterateArray(myArray, () => {
-                console.log('全部处理完.');
+                // console.log('全部处理完.');
                 // console.log("excledata", excledata, filePath, worksheetName);
                 const worksheetName = fullDate;
                 appendToExcel(outfilePath, worksheetName, excledata); //把处理完成的结果追加到表格
@@ -103,15 +105,21 @@ function main() { //主方法
                 milliseconds = today.getMilliseconds();
                 // console.log("dayHour:", dayHour)
                 if (Failed.length !== 0) {
-                    // createExcelFile(Failed, './outFile/首轮识别失败记录.xlsx', dayHour); //写出失败记录
                     appendToExcel('./outFile/首轮识别失败记录.xlsx', dayHour, Failed); //写出失败记录
                     generateLog(logFilePath, "全部处理完,程序退出！" + `--${nowTime}`);
+                    console.log('首轮分析有部分失败:', Failed);
                 } else {
-                    console.log('首轮识别没有失败，数组为空！');
+                    console.log('首轮分析没有失败，数组为空！');
                 }
-                console.log('全部处理完,程序退出');
-                process.exit() //结束程序
+
+                setTimeout(function () {
+                    // 这里是延时后执行的代码
+                    console.log('全部处理完,程序退出');
+                    process.exit() //结束程序
+                }, 3000); // 1000 毫秒 = 1 秒
+
             }, url2);
+
         } catch (error) {
             console.error("Error reading Excel file:"); //错误太长error
             today = new Date();
@@ -129,8 +137,8 @@ function iterateArray(array, callback, url2) {
     let index = 0;
 
     function next() {
-        if (index < array.length - 542) {
-            console.log("待处理总数量：", array.length, url2)
+        if (index < array.length - 533) {
+            console.log("待处理总数量：", array.length - index, url2)
             getJinaApi(array[index], () => {
                 index++;
                 next();
@@ -149,7 +157,9 @@ function getJinaApi(item, callback, url2, index, item) {
     // 使用GET请求url1+url2
     var url3 = url1 + url2;
     console.log('开始处理第:', index + 1, '网站,Url3:', url3)
-    httpClient.get(url3, { null: "" })
+    httpClient.get(url3, {
+        null: ""
+    })
         .then((data) => {
             if (data != "") {
                 let text = removeLinesWithURLs(data);
@@ -165,6 +175,12 @@ function getJinaApi(item, callback, url2, index, item) {
                 today = new Date();
                 milliseconds = today.getMilliseconds();
                 generateLog(logFilePath, "jina.ai接口请求返回格式异常数据," + `--${nowTime}`);
+                array3.splice(0, 0, item[0] || '没有数据');
+                array3.splice(1, 0, url2);
+                array3.splice(2, 0, item[2] || '没有数据');
+                array3.splice(3, 0, item[3] || '没有数据');
+                array3.splice(4, 0, 'jinaAPI请求失败!');
+                Failed.push(array3);
             }
 
         })
@@ -175,10 +191,10 @@ function getJinaApi(item, callback, url2, index, item) {
             milliseconds = today.getMilliseconds();
             generateLog(logFilePath, "jina.ai接口请求失败," + `${error}` + `--${nowTime}`);
             // 异常的数据加入另外表格临时缓存
-            array3.splice(0, 0, item[0]);
+            array3.splice(0, 0, item[0] || '没有数据');
             array3.splice(1, 0, url2);
-            array3.splice(2, 0, item[2]);
-            array3.splice(3, 0, item[3]);
+            array3.splice(2, 0, item[2] || '没有数据');
+            array3.splice(3, 0, item[3] || '没有数据');
             array3.splice(4, 0, 'jinaAPI请求失败!');
             Failed.push(array3);
             callback();
@@ -227,10 +243,10 @@ function openchatApiPost(text, item, callback, index) {
                 generateLog(logFilePath, "已完成第" + `${index + 1}` + "网站:" + `${item[1]}` + "分析" + `--${nowTime}`);
                 var array = [],
                     array2 = [];
-                array.splice(0, 0, item[0]);
-                array.splice(1, 0, item[1]);
+                array.splice(0, 0, item[0] || '没有数据');
+                array.splice(1, 0, item[1] || '没有数据');
                 if (response.choices[0].message.content === " 1") {
-                    array.splice(2, 0, item[3]);
+                    array.splice(2, 0, item[3] || '没有数据');
                     array.splice(3, 0, '是');
                     array.splice(4, 0, ''); //如果后面要追加数据，前面需要先追加
 
@@ -246,13 +262,13 @@ function openchatApiPost(text, item, callback, index) {
                     array.splice(3, 0, '!!');
                     array.splice(4, 0, webState);
                     // 异常的数据加入另外表格临时缓存
-                    array2.splice(0, 0, item[0]);
-                    array2.splice(1, 0, item[1]);
-                    array2.splice(2, 0, item[2]);
-                    array2.splice(3, 0, item[3]);
+                    array2.splice(0, 0, item[0] || '没有数据');
+                    array2.splice(1, 0, item[1] || '没有数据');
+                    array2.splice(2, 0, item[2] || '没有数据');
+                    array2.splice(3, 0, item[3] || '没有数据');
                     array2.splice(4, 0, '首轮识别失败！'); //取代原来的是非显示
                     Failed.push(array2);
-                    console.log("Failed:", Failed);
+                    // console.log("Failed:", Failed);
 
                 }
                 milliseconds = today.getMilliseconds();
@@ -267,7 +283,7 @@ function openchatApiPost(text, item, callback, index) {
                 milliseconds = today.getMilliseconds();
                 generateLog(logFilePath, '当次openchatAPI返回的数据不含预期的格式结构!:' + `${response.choices[0].message}` + `--${nowTime}`);
             }
-            const processingTime = Math.random() * 2000;
+            const processingTime = Math.random() * 1200;
 
             setTimeout(() => {
                 console.log(` 分析 ${item[1]} 延时 ${processingTime} ms`);
@@ -301,7 +317,11 @@ function openchatApiPost(text, item, callback, index) {
 // 表格集中处理====================================================
 // const module = require('./makeExcel');  //modeule 是全局厂家变量
 // 调用异步函数，并在完成后打印结果  
-const options = { outfilePath: outfilePath, nowTime: nowTime, fullDate: fullDate }; // 创建一个包含 file 属性的对象   
+const options = {
+    outfilePath: outfilePath,
+    nowTime: nowTime,
+    fullDate: fullDate
+}; // 创建一个包含 file 属性的对象   
 myModule.asyncFunction('data to process', options, function (err, result) {
     if (err) {
         console.error('Error:', err);
