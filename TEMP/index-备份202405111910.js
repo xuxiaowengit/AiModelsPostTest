@@ -1,4 +1,5 @@
-// 引入模块 
+// 获取今天的日期  
+var today = new Date();
 const XLSX = require('xlsx');
 const generateLog = require('./logger'); //日志模块
 const path = require('path');
@@ -12,29 +13,23 @@ const {
     checkFileExists,
     appendWorksheetToFile
 } = require('./outFile');
-const { // 读取表格模块
+
+// 读取表格模块
+const {
     readExcelFile
 } = require("./readFile");
+
 const httpClient = require("./axios");
 const { saveTextToFile } = require('./outFile'); //保存txt模块
 const interactWithChatGPT = require('./chatAPI');
 const fs = require('fs');
-var outfilePath = './outExe/已识别网站记录.xlsx';
-const myModule = require('./makeExcel');
-
-// 常量定义
-var today = new Date();
 var year = today.getFullYear();
 var month = (today.getMonth() + 1).toString().padStart(2, '0'); // getMonth() 返回的月份是从 0 开始的，所以需要加 1，并用 padStart 填充前导零  
 var day = today.getDate().toString().padStart(2, '0'); // getDate() 返回的是日期，不需要加 1
 var hours = today.getHours();
-var minutes = today.getMinutes();
-var seconds = today.getSeconds();
-var milliseconds = today.getMilliseconds();
 var fullDate = year + '-' + month + '-' + day;
 var dayHour = year + '-' + month + '-' + day + "-" + hours;;
-var nowTime = year + '-' + month + '-' + day + ` ` + hours + '-' + minutes + '-' + seconds + `:` + milliseconds + `ms`
-
+var nowTime;
 
 // 定义一个函数来更新和打印毫秒数  
 function updateMilliseconds() {
@@ -45,9 +40,9 @@ function updateMilliseconds() {
     month = (today.getMonth() + 1).toString().padStart(2, '0'); // getMonth() 返回的月份是从 0 开始的，所以需要加 1，并用 padStart 填充前导零  
     day = today.getDate().toString().padStart(2, '0'); // getDate() 返回的是日期，不需要加 1
     hours = today.getHours();
-    minutes = today.getMinutes();
-    seconds = today.getSeconds();
-    milliseconds = today.getMilliseconds();
+    var minutes = today.getMinutes();
+    var seconds = today.getSeconds();
+    var milliseconds = today.getMilliseconds();
     dayHour = year + '-' + month + '-' + day + "-" + hours;
     // 组合成完整的日期字符串  
     fullDate = year + '-' + month + '-' + day;
@@ -55,6 +50,7 @@ function updateMilliseconds() {
     // console.log(milliseconds); // 这将每秒打印新的毫秒数
 
 }
+
 // 使用setInterval来每秒调用updateMilliseconds函数  
 setInterval(updateMilliseconds, 1000); // 1000毫秒 = 1秒
 
@@ -78,7 +74,6 @@ function removeLinesWithURLs(text) {
 }
 
 
-
 var excledata = []; //处理结果表格缓存
 var Failed = []; //识别异常的拎出来
 var url1 = "https://r.jina.ai/"; //web文本获取接口
@@ -97,7 +92,6 @@ function main() { //主方法
             iterateArray(myArray, () => {
                 console.log('全部处理完.');
                 // console.log("excledata", excledata, filePath, worksheetName);
-                const worksheetName = fullDate;
                 appendToExcel(outfilePath, worksheetName, excledata); //把处理完成的结果追加到表格
                 today = new Date();
                 milliseconds = today.getMilliseconds();
@@ -129,7 +123,7 @@ function iterateArray(array, callback, url2) {
     let index = 0;
 
     function next() {
-        if (index < array.length - 542) {
+        if (index < array.length) {
             console.log("待处理总数量：", array.length, url2)
             getJinaApi(array[index], () => {
                 index++;
@@ -144,6 +138,8 @@ function iterateArray(array, callback, url2) {
 
 
 // ebdc4157d67e6a7c745c42174d8df71802a7397ceb9962e1d552ca3f765685b8   openchat APIkey
+
+
 // 获取过滤的网页内容
 function getJinaApi(item, callback, url2, index, item) {
     // 使用GET请求url1+url2
@@ -187,8 +183,9 @@ function getJinaApi(item, callback, url2, index, item) {
 
 
 
-// 处理结果缓存表格
+// 假设你有以下数据  
 var excelData = [];
+
 // openchatAI请求识别
 function openchatApiPost(text, item, callback, index) {
     // console.log("CCl:", "./txt/" + item[0] + ".txt")
@@ -298,20 +295,99 @@ function openchatApiPost(text, item, callback, index) {
 
 
 
-// 表格集中处理====================================================
-// const module = require('./makeExcel');  //modeule 是全局厂家变量
-// 调用异步函数，并在完成后打印结果  
-const options = { outfilePath: outfilePath, nowTime: nowTime, fullDate: fullDate }; // 创建一个包含 file 属性的对象   
-myModule.asyncFunction('data to process', options, function (err, result) {
-    if (err) {
-        console.error('Error:', err);
-        return;
+
+
+
+
+
+
+
+const outfilePath = './outFile/已识别网站记录.xlsx';
+const worksheetName = fullDate;
+const worksheetData = [
+    ['邮箱', '网站', '相关属性', "判定", '备注', '时间'],
+];
+
+
+// 本地处理结果表文件存在否
+if (fs.existsSync(outfilePath)) {
+    console.log("表已经存在", worksheetName);
+    const workbook = XLSX.readFile(outfilePath); // 替换为你的工作簿路径
+    // 检查是否存在名为 'xxx' 的工作表  
+    const sheetExists = worksheetExists(workbook, worksheetName);
+    if (sheetExists) {
+        // console.log(`${worksheetName} 是否存在: ${sheetExists}`);
+        console.log("工作表名存在,数据直接追加到工作表:", worksheetName)
+    } else {
+        console.log("工作表在,表名不存在,新建立工作表:", worksheetName)
+        // 调用模块函数，追加工作表  
+        appendWorksheetToFile(
+            outfilePath, // 现有工作簿的路径  
+            outfilePath, // 更新后工作簿的路径  
+            worksheetName, // 新工作表的名称  
+            worksheetData // 新工作表的数据  
+        );
+        today = new Date();
+        milliseconds = today.getMilliseconds();
+        generateLog(logFilePath, '工作表在,表名不存在,新建立工作表' + `--${nowTime}`);
     }
-    console.log('表格初始化异步处理:', result);
-    nextMethod(result);
-});
-// 主函数
-function nextMethod(data) {
-    console.log('Next method with main:', data);
-    main();
+
+} else {
+    console.log("表格不存在");
+    // 调用函数创建 Excel 文件  创建新表
+    createExcelFile(worksheetData, outfilePath, worksheetName);
+    today = new Date();
+    milliseconds = today.getMilliseconds();
+    generateLog(logFilePath, '表文件不存在,新建立表文件' + `--${nowTime}`);
+    // 主函数
 }
+
+
+
+
+
+
+
+
+const outfilePath2 = './outFile/首轮识别失败记录.xlsx';
+const worksheetName2 = fullDate;
+const worksheetData2 = [
+    ['邮箱', '网站', '关键词', '相关属性', '判断结论'],
+];
+
+
+// 本地处理异常结果表文件存在否
+if (fs.existsSync(outfilePath2)) {
+    console.log("表2已经存在", worksheetName2);
+    const workbook = XLSX.readFile(outfilePath2); // 替换为你的工作簿路径
+    // 检查是否存在名为 'xxx' 的工作表  
+    const sheetExists = worksheetExists(workbook, worksheetName2);
+    if (sheetExists) {
+        // console.log(`${worksheetName} 是否存在: ${sheetExists}`);
+        console.log("工作表2名存在,数据直接追加到工作表:", worksheetName2)
+    } else {
+        console.log("工作表2在,表名不存在,新建立工作表:", worksheetName2)
+        // 调用模块函数，追加工作表  
+        appendWorksheetToFile(
+            outfilePath2, // 现有工作簿的路径  
+            outfilePath2, // 更新后工作簿的路径  
+            worksheetName2, // 新工作表的名称  
+            worksheetData2 // 新工作表的数据  
+        );
+        today = new Date();
+        milliseconds = today.getMilliseconds();
+        generateLog(logFilePath, '工作表2在,表名不存在,新建立工作表' + `--${nowTime}`);
+    }
+
+} else {
+    console.log("表格2不存在");
+    // 调用函数创建 Excel 文件  创建新表
+    createExcelFile(worksheetData2, outfilePath2, worksheetName2);
+    today = new Date();
+    milliseconds = today.getMilliseconds();
+    generateLog(logFilePath, '表2文件不存在,新建立表文件' + `--${nowTime}`);
+}
+
+
+// 主函数
+main() //启动主方法
