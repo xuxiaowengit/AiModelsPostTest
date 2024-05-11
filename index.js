@@ -123,7 +123,7 @@ function iterateArray(array, callback, url2) {
     let index = 0;
 
     function next() {
-        if (index < array.length - 540) {
+        if (index < array.length) {
             console.log("待处理总数量：", array.length, url2)
             getJinaApi(array[index], () => {
                 index++;
