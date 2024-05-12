@@ -337,7 +337,7 @@ myModule.asyncFunction('data to process', options, function (err, result) {
         console.error('Error:', err);
         return;
     }
-    console.log('表格初始化异步处理:', result);
+    // console.log('表格初始化异步处理:', result);
     nextMethod(result);
 });
 // 主函数

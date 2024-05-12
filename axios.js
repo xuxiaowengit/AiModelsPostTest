@@ -15,7 +15,7 @@ function get(url, params = {}, headers = {}) {
             return response.data;
         })
         .catch(error => {
-            console.error('GET request failed:', error);
+            console.error('GET request failed:', error.code || "接口请求失败！");
             throw error;
         });
 }

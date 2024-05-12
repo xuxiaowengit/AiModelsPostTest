@@ -30,7 +30,7 @@ const logFilePath = path.join(__dirname, './log/appRun.log'); // 日志文件路
 
 
 module.exports.asyncFunction = function (data, options, callback) {
-    console.log("test:", options)
+    // console.log("test:", options)
 
     // var outfilePath = options.filePath
     // const message = 'This is  system log,下面是本次(' + `${options.nowTime}` + ')系统运行日志：'; // 要记录的日志消息
