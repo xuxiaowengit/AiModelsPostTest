@@ -80,7 +80,8 @@ module.exports.asyncFunction = function (data, options, callback) {
         }
 
 
-        const outfilePath2 = './outExe/首轮识别失败记录.xlsx';
+        // const outfilePath2 = 'C:\\Users\\LYZ\\Desktop\\AI分析结果\\首轮识别失败记录.xlsx'; //./outExe/首轮识别失败记录.xlsx';
+        const outfilePath2 = 'C:\\Users\\jeking\\Desktop\\AI分析结果\\首轮识别失败记录.xlsx';
         const worksheetName2 = options.fullDate;
         const worksheetData2 = [
             ['邮箱', '网站', '关键词', '相关属性', '判断结论'],

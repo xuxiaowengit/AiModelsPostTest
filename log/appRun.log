@@ -1799,3 +1799,9 @@
 2024-05-12T07:17:10.572Z: 已完成第2网站:http://green-planet-projects.de获取--2024-05-12 15-17-10:371ms
 2024-05-12T07:17:20.586Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 15-17-20:447ms
 2024-05-12T07:17:34.268Z: This is  system log,下面是本次(2024-05-12 15-17-34:268ms)系统日志：
+2024-05-12T10:03:49.622Z: This is  system log,下面是本次(2024-05-12 18-3-49:622ms)系统日志：
+2024-05-12T10:03:49.640Z: 表1文件不存在,新建立表文件--2024-05-12 18-3-49:622ms
+2024-05-12T10:03:49.644Z: 表2文件不存在,新建立表文件--2024-05-12 18-3-49:622ms
+2024-05-12T10:04:14.914Z: This is  system log,下面是本次(2024-05-12 18-4-14:914ms)系统日志：
+2024-05-12T10:04:24.073Z: 已完成第1网站:http://sunationsolarsystems.com获取--2024-05-12 18-4-23:971ms
+2024-05-12T10:04:34.095Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-4-34:13ms

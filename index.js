@@ -21,7 +21,8 @@ const {
 } = require('./outFile'); //保存txt模块
 const interactWithChatGPT = require('./chatAPI');
 const fs = require('fs');
-var outfilePath = './outExe/已识别网站记录.xlsx';
+var outfilePath = 'C:\\Users\\jeking\\Desktop\\AI分析结果\\已识别网站记录.xlsx' //./outExe/已识别网站记录.xlsx'; 
+// var outfilePath = 'C:\\Users\\LYZ\\Desktop\\AI分析结果\\已识别网站记录.xlsx' //C: \\Users\\LYZ\\Desktop\\AI分析结果\\
 const myModule = require('./makeExcel');
 
 // 常量定义
@@ -138,7 +139,7 @@ function iterateArray(array, callback, url2) {
     let index = 0;
 
     function next() {
-        if (index < array.length) {
+        if (index < array.length - 6185) {
             console.log("等待处理总数量：", array.length - index, url2)
             getJinaApi(array[index], () => {
                 index++;
@@ -283,6 +284,14 @@ function openchatApiPost(text, item, callback, index) {
                 today = new Date();
                 milliseconds = today.getMilliseconds();
                 generateLog(logFilePath, '当次openchatAPI返回的数据不含预期的格式结构!:' + `${response.choices[0].message}` + `--${nowTime}`);
+
+                // 异常的数据加入另外表格临时缓存
+                array2.splice(0, 0, item[0] || '没有数据');
+                array2.splice(1, 0, item[1] || '没有数据');
+                array2.splice(2, 0, item[2] || '没有数据');
+                array2.splice(3, 0, item[3] || '没有数据');
+                array2.splice(4, 0, 'chapAPI分析失败，返回格式非预期或没有返回！'); //取代原来的是非显示
+                Failed.push(array2);
             }
             const processingTime = Math.random() * 1200;
 
