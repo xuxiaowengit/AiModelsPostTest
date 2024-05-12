@@ -55,7 +55,8 @@ function updateMilliseconds() {
     fullDate = year + '-' + month + '-' + day;
     nowTime = year + '-' + month + '-' + day + ` ` + hours + '-' + minutes + '-' + seconds + `:` + milliseconds + `ms`
     // console.log(milliseconds); // 这将每秒打印新的毫秒数
-
+    options.nowTime = nowTime;
+    options.fullDate = fullDate;
 }
 // 使用setInterval来每秒调用updateMilliseconds函数  
 setInterval(updateMilliseconds, 1000); // 1000毫秒 = 1秒
@@ -317,7 +318,7 @@ function openchatApiPost(text, item, callback, index) {
 // 表格集中处理====================================================
 // const module = require('./makeExcel');  //modeule 是全局厂家变量
 // 调用异步函数，并在完成后打印结果  
-const options = {
+var options = {
     outfilePath: outfilePath,
     nowTime: nowTime,
     fullDate: fullDate

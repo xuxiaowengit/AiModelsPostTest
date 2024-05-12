@@ -1781,3 +1781,20 @@
 2024-05-12T06:57:23.108Z: 已完成第6网站:http://alliantenergy.com获取--2024-05-12 14-57-22:360ms
 2024-05-12T06:57:33.124Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-57-32:424ms
 2024-05-12T06:57:36.640Z: 已完成第7网站:http://axa.com.mx获取--2024-05-12 14-57-36:446ms
+2024-05-12T07:10:51.908Z: This is  system log,下面是本次(2024-05-12 15-10-51:908ms)系统日志：
+2024-05-12T07:10:51.939Z: 表2文件不存在,新建立表文件--2024-05-12 15-10-51:908ms
+2024-05-12T07:11:02.735Z: 已完成第1网站:http://sunationsolarsystems.com获取--2024-05-12 15-11-1:956ms
+2024-05-12T07:11:12.753Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 15-11-12:33ms
+2024-05-12T07:11:15.553Z: 已完成第2网站:http://green-planet-projects.de获取--2024-05-12 15-11-15:60ms
+2024-05-12T07:11:25.557Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 15-11-25:114ms
+2024-05-12T07:11:46.994Z: 已完成第3网站:http://sunprofit.de获取--2024-05-12 15-11-46:241ms
+2024-05-12T07:11:57.002Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 15-11-56:288ms
+2024-05-12T07:12:01.278Z: 已完成第4网站:http://aptechnic.com获取--2024-05-12 15-12-0:298ms
+2024-05-12T07:12:11.292Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 15-12-10:353ms
+2024-05-12T07:16:47.212Z: 表1文件不存在,新建立表文件--2024-05-12 15-16-47:194ms
+2024-05-12T07:16:47.195Z: This is  system log,下面是本次(2024-05-12 15-16-47:194ms)系统日志：
+2024-05-12T07:16:47.215Z: 表2文件不存在,新建立表文件--2024-05-12 15-16-47:194ms
+2024-05-12T07:16:57.637Z: 已完成第1网站:http://sunationsolarsystems.com获取--2024-05-12 15-16-57:263ms
+2024-05-12T07:17:07.651Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 15-17-7:344ms
+2024-05-12T07:17:10.572Z: 已完成第2网站:http://green-planet-projects.de获取--2024-05-12 15-17-10:371ms
+2024-05-12T07:17:20.586Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 15-17-20:447ms
