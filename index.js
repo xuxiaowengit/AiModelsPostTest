@@ -63,7 +63,7 @@ setInterval(updateMilliseconds, 1000); // 1000毫秒 = 1秒
 
 // 日志模块初始化
 const logFilePath = path.join(__dirname, './log/appRun.log'); // 日志文件路径
-const message = 'This is  system log,下面是本次(' + `${nowTime}` + ')邮件发送日志：'; // 要记录的日志消息
+const message = 'This is  system log,下面是本次(' + `${nowTime}` + ')系统日志：'; // 要记录的日志消息
 generateLog(logFilePath, message);
 
 // 文本处理
@@ -90,11 +90,11 @@ function main() { //主方法
     (async () => {
         try {
             // const filePath = "./txt/测试数据.xls"; // 替换为你的Excel文件路径
-            const filePath = "./txt/第二批测试数据.xlsx"; // 替换为你的Excel文件路径
+            const filePath = "./txt/第三批测试数据0511.xlsx"; // 替换为你的Excel文件路径
             const data = await readExcelFile(filePath);
             console.log("表格数据:", data[0], data.length); // 输出Excel表格中的数据
             url2 = data[0][1]
-            // 遍历异步调用方法入口
+            // 遍历待处理数据表，异步调用方法入口
             var myArray = data;
             iterateArray(myArray, () => {
                 // console.log('全部处理完.');
@@ -137,8 +137,8 @@ function iterateArray(array, callback, url2) {
     let index = 0;
 
     function next() {
-        if (index < array.length - 533) {
-            console.log("待处理总数量：", array.length - index, url2)
+        if (index < array.length) {
+            console.log("等待处理总数量：", array.length - index, url2)
             getJinaApi(array[index], () => {
                 index++;
                 next();

@@ -1715,3 +1715,69 @@
 2024-05-11T12:46:40.592Z: 已完成第10网站:http://electricity-today.com获取--2024-05-11 20-46-40:519ms
 2024-05-11T12:46:43.056Z: 已完成第10网站:http://electricity-today.com分析--2024-05-11 20-46-42:527ms
 2024-05-11T12:46:44.584Z: 全部处理完,程序退出！--2024-05-11 20-46-44:551ms
+2024-05-12T06:44:32.456Z: This is  system log,下面是本次(2024-05-12 14-44-32:455ms)邮件发送日志：
+2024-05-12T06:44:32.462Z: This is  system log,下面是本次(2024-05-12 14-44-32:455ms)邮件发送日志：
+2024-05-12T06:44:32.498Z: 工作表在,表名不存在,新建立工作表--2024-05-12 14-44-32:455ms
+2024-05-12T06:44:32.507Z: 工作表2在,表名不存在,新建立工作表--2024-05-12 14-44-32:455ms
+2024-05-12T06:44:32.510Z: Error reading Excel file:Error: ENOENT: no such file or directory, open 'C:\Users\LYZ\Desktop\AITest\postTest\txt\第二三批测试数据0511.xlsx'--2024-05-12 14-44-32:455ms
+2024-05-12T06:46:07.947Z: This is  system log,下面是本次(2024-05-12 14-46-7:947ms)邮件发送日志：
+2024-05-12T06:46:07.951Z: This is  system log,下面是本次(2024-05-12 14-46-7:947ms)邮件发送日志：
+2024-05-12T06:47:52.147Z: jina.ai接口请求失败,AxiosError: Request failed with status code 524--2024-05-12 14-47-51:589ms
+2024-05-12T06:47:55.436Z: 已完成第2网站:http://green-planet-projects.de获取--2024-05-12 14-47-54:616ms
+2024-05-12T06:48:05.460Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-48-4:675ms
+2024-05-12T06:48:13.058Z: 已完成第3网站:http://sunprofit.de获取--2024-05-12 14-48-12:724ms
+2024-05-12T06:48:23.062Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-48-22:771ms
+2024-05-12T06:48:33.504Z: 已完成第4网站:http://aptechnic.com获取--2024-05-12 14-48-32:823ms
+2024-05-12T06:48:43.519Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-48-42:892ms
+2024-05-12T06:48:53.709Z: 已完成第5网站:http://sunset.com获取--2024-05-12 14-48-52:960ms
+2024-05-12T06:49:03.716Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-49-3:15ms
+2024-05-12T06:49:07.912Z: 已完成第6网站:http://alliantenergy.com获取--2024-05-12 14-49-7:39ms
+2024-05-12T06:49:17.923Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-49-17:100ms
+2024-05-12T06:49:22.909Z: 已完成第7网站:http://axa.com.mx获取--2024-05-12 14-49-22:116ms
+2024-05-12T06:49:32.924Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-49-32:172ms
+2024-05-12T06:49:39.266Z: 已完成第8网站:http://tethys-energy.com获取--2024-05-12 14-49-39:217ms
+2024-05-12T06:49:49.275Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-49-49:244ms
+2024-05-12T06:49:54.299Z: 已完成第9网站:http://akkusys.de获取--2024-05-12 14-49-54:265ms
+2024-05-12T06:50:04.316Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-50-4:314ms
+2024-05-12T06:50:30.143Z: 已完成第10网站:http://solardelacuario.com获取--2024-05-12 14-50-29:451ms
+2024-05-12T06:50:40.158Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-50-39:513ms
+2024-05-12T06:50:45.251Z: 已完成第11网站:http://gastec.com获取--2024-05-12 14-50-44:547ms
+2024-05-12T06:50:55.256Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-50-54:610ms
+2024-05-12T06:50:58.064Z: 已完成第12网站:http://firstsolar.com获取--2024-05-12 14-50-57:630ms
+2024-05-12T06:51:08.073Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-51-7:709ms
+2024-05-12T06:51:11.452Z: 已完成第13网站:http://siemens-energy.com获取--2024-05-12 14-51-10:718ms
+2024-05-12T06:51:21.465Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-51-20:764ms
+2024-05-12T06:51:24.856Z: 已完成第14网站:http://orient-power.com获取--2024-05-12 14-51-24:788ms
+2024-05-12T06:51:34.866Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-51-34:849ms
+2024-05-12T06:51:44.020Z: 已完成第15网站:http://agrownomyco.com获取--2024-05-12 14-51-43:900ms
+2024-05-12T06:51:54.024Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-51-53:947ms
+2024-05-12T06:53:34.756Z: jina.ai接口请求失败,AxiosError: Request failed with status code 524--2024-05-12 14-53-34:536ms
+2024-05-12T06:54:05.421Z: jina.ai接口请求失败,AxiosError: Request failed with status code 422--2024-05-12 14-54-4:690ms
+2024-05-12T06:54:06.431Z: 已完成第18网站:http://vikramsolar.com获取--2024-05-12 14-54-5:696ms
+2024-05-12T06:54:16.447Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-54-15:761ms
+2024-05-12T06:54:23.647Z: 已完成第19网站:http://thepowerbase.gr获取--2024-05-12 14-54-22:809ms
+2024-05-12T06:54:33.653Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-54-32:863ms
+2024-05-12T06:54:39.512Z: jina.ai接口请求失败,AxiosError: Request failed with status code 422--2024-05-12 14-54-38:889ms
+2024-05-12T06:54:50.976Z: 已完成第21网站:http://geneco.sg获取--2024-05-12 14-54-50:960ms
+2024-05-12T06:54:52.655Z: This is  system log,下面是本次(2024-05-12 14-54-52:655ms)系统日志：
+2024-05-12T06:54:57.398Z: jina.ai接口请求失败,AxiosError: Request failed with status code 422--2024-05-12 14-54-56:673ms
+2024-05-12T06:54:59.978Z: 已完成第2网站:http://green-planet-projects.de获取--2024-05-12 14-54-59:688ms
+2024-05-12T06:55:09.985Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-55-9:734ms
+2024-05-12T06:55:15.783Z: 已完成第3网站:http://sunprofit.de获取--2024-05-12 14-55-15:769ms
+2024-05-12T06:55:25.798Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-55-24:822ms
+2024-05-12T06:55:28.800Z: 已完成第4网站:http://aptechnic.com获取--2024-05-12 14-55-27:835ms
+2024-05-12T06:55:38.810Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-55-37:892ms
+2024-05-12T06:56:10.013Z: This is  system log,下面是本次(2024-05-12 14-56-10:13ms)系统日志：
+2024-05-12T06:56:21.230Z: 已完成第1网站:http://sunationsolarsystems.com获取--2024-05-12 14-56-21:51ms
+2024-05-12T06:56:31.245Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-56-31:89ms
+2024-05-12T06:56:32.646Z: 已完成第2网站:http://green-planet-projects.de获取--2024-05-12 14-56-32:94ms
+2024-05-12T06:56:42.658Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-56-42:153ms
+2024-05-12T06:56:43.724Z: 已完成第3网站:http://sunprofit.de获取--2024-05-12 14-56-43:160ms
+2024-05-12T06:56:53.729Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-56-53:200ms
+2024-05-12T06:56:54.785Z: 已完成第4网站:http://aptechnic.com获取--2024-05-12 14-56-54:212ms
+2024-05-12T06:57:04.797Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-57-4:264ms
+2024-05-12T06:57:09.465Z: 已完成第5网站:http://sunset.com获取--2024-05-12 14-57-9:292ms
+2024-05-12T06:57:19.479Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-57-19:355ms
+2024-05-12T06:57:23.108Z: 已完成第6网站:http://alliantenergy.com获取--2024-05-12 14-57-22:360ms
+2024-05-12T06:57:33.124Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 14-57-32:424ms
+2024-05-12T06:57:36.640Z: 已完成第7网站:http://axa.com.mx获取--2024-05-12 14-57-36:446ms

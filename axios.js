@@ -34,7 +34,7 @@ function post(url, data = {}, headers = {}) {
             return response.data;
         })
         .catch(error => {
-            console.error('POST request failed:', error);
+            console.error('POST request failed:', error || "JinaApi请求网站超时或返回异常！");
             throw error;
         });
 }

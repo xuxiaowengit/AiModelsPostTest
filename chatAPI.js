@@ -62,7 +62,7 @@ async function interactWithChatGPT(inputText, apiKey, modelEndpoint, modelName) 
         }
         // 解析并返回响应数据  
         const responseData = await response.json();
-        console.log("responseData", responseData)
+        // console.log("responseData", responseData)
         return responseData;
     } catch (error) {
         return error

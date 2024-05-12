@@ -33,8 +33,8 @@ module.exports.asyncFunction = function (data, options, callback) {
     console.log("test:", options)
 
     // var outfilePath = options.filePath
-    const message = 'This is  system log,下面是本次(' + `${options.nowTime}` + ')邮件发送日志：'; // 要记录的日志消息
-    generateLog(logFilePath, message);
+    // const message = 'This is  system log,下面是本次(' + `${options.nowTime}` + ')系统运行日志：'; // 要记录的日志消息
+    // generateLog(logFilePath, message);
 
     // 模拟异步操作  
 
