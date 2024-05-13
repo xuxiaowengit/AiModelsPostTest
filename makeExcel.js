@@ -5,16 +5,16 @@ const generateLog = require('./logger'); //日志模块
 const path = require('path');
 // 输出excel表格模块
 const {
-    writeToExcel,
-    appendDataToExcel,
+    // writeToExcel,
+    // appendDataToExcel,
     createExcelFile,
     worksheetExists,
-    checkFileExists,
+    // checkFileExists,
     appendWorksheetToFile
 } = require('./outFile');
 
 
-const httpClient = require("./axios");
+// const httpClient = require("./axios");
 const fs = require('fs');
 // 日志模块初始化
 const logFilePath = path.join(__dirname, './log/appRun.log'); // 日志文件路径
@@ -40,7 +40,8 @@ module.exports.asyncFunction = function (data, options, callback) {
 
     setTimeout(() => {
 
-        const worksheetName = options.fullDate;
+        // const worksheetName = options.fullDate;
+        const worksheetName = options.dayHour;
         const worksheetData = [
             ['邮箱', '网站', '相关属性', "判定", '备注', '时间'],
         ];
@@ -80,27 +81,27 @@ module.exports.asyncFunction = function (data, options, callback) {
         }
 
 
-        // const outfilePath2 = 'C:\\Users\\LYZ\\Desktop\\AI分析结果\\首轮识别失败记录.xlsx'; //./outExe/首轮识别失败记录.xlsx';
-        const outfilePath2 = 'C:\\Users\\jeking\\Desktop\\AI分析结果\\首轮识别失败记录.xlsx';
-        const worksheetName2 = options.fullDate;
+        // const outfilePath2   = 'C:\\Users\\LYZ\\Desktop\\AI分析结果\\首轮处理失败记录.xlsx'; //./outExe/首轮识别失败记录.xlsx';
+        // const outfilePath2 = 'C:\\Users\\jeking\\Desktop\\AI分析结果\\第二批首轮识别失败记录.xlsx';
+        // var outfilePath = 'C:\\Users\\Administrator\\Desktop\\AI分析结果\\首轮识别失败记录.xlsx' //C: \\Users\\LYZ\\Desktop\\AI分析结果\\
+        const worksheetName2 = options.dayHour;
         const worksheetData2 = [
             ['邮箱', '网站', '关键词', '相关属性', '判断结论'],
         ];
         // 本地处理异常结果表文件存在否
-        if (fs.existsSync(outfilePath2)) {
-            console.log("表2已经存在", worksheetName2);
-            const workbook = XLSX.readFile(outfilePath2); // 替换为你的工作簿路径
+        if (fs.existsSync(options.outfilePath2)) {
+            console.log("表2已经存在", options.outfilePath2);
+            const workbook = XLSX.readFile(options.outfilePath2); // 替换为你的工作簿路径
             // 检查是否存在名为 'xxx' 的工作表  
             const sheetExists = worksheetExists(workbook, worksheetName2);
             if (sheetExists) {
                 // console.log(`${worksheetName} 是否存在: ${sheetExists}`);
                 console.log("工作表2名存在,数据直接追加到工作表:", worksheetName2)
             } else {
-                // console.log("工作表2在,表名不存在,新建立工作表:", worksheetName2)
                 // 调用模块函数，追加工作表  
                 appendWorksheetToFile(
-                    outfilePath2, // 现有工作簿的路径  
-                    outfilePath2, // 更新后工作簿的路径  
+                    options.outfilePath2, // 现有工作簿的路径
+                    options.outfilePath2, // 更新后工作簿的路径
                     worksheetName2, // 新工作表的名称  
                     worksheetData2 // 新工作表的数据  
                 );
@@ -112,7 +113,7 @@ module.exports.asyncFunction = function (data, options, callback) {
         } else {
             // console.log("表格2不存在");
             // 调用函数创建 Excel 文件  创建新表
-            createExcelFile(worksheetData2, outfilePath2, worksheetName2);
+            createExcelFile(worksheetData2, options.outfilePath2, worksheetName2);
             today = new Date();
             milliseconds = today.getMilliseconds();
             generateLog(logFilePath, '表2文件不存在,新建立表文件' + `--${options.nowTime}`);

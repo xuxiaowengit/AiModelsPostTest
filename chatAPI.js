@@ -45,6 +45,7 @@ async function interactWithChatGPT(inputText, apiKey, modelEndpoint, modelName) 
 
     try {
 
+
         // 发起 POST 请求  
         const response = await fetch(modelEndpoint, {
             method: 'POST',

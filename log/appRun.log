@@ -1805,3 +1805,207 @@
 2024-05-12T10:04:14.914Z: This is  system log,下面是本次(2024-05-12 18-4-14:914ms)系统日志：
 2024-05-12T10:04:24.073Z: 已完成第1网站:http://sunationsolarsystems.com获取--2024-05-12 18-4-23:971ms
 2024-05-12T10:04:34.095Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-4-34:13ms
+2024-05-12T10:20:46.881Z: This is  system log,下面是本次(2024-05-12 18-20-46:881ms)系统日志：
+2024-05-12T10:20:58.749Z: 已完成第1网站:http://sunationsolarsystems.com获取--2024-05-12 18-20-57:955ms
+2024-05-12T10:21:08.769Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-21-8:6ms
+2024-05-12T10:21:13.805Z: 已完成第2网站:http://green-planet-projects.de获取--2024-05-12 18-21-13:28ms
+2024-05-12T10:21:23.816Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-21-23:71ms
+2024-05-12T10:21:30.211Z: 已完成第3网站:http://sunprofit.de获取--2024-05-12 18-21-30:101ms
+2024-05-12T10:21:40.214Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-21-40:167ms
+2024-05-12T10:21:42.978Z: 已完成第4网站:http://aptechnic.com获取--2024-05-12 18-21-42:183ms
+2024-05-12T10:21:52.985Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-21-52:266ms
+2024-05-12T10:21:59.093Z: 已完成第5网站:http://sunset.com获取--2024-05-12 18-21-58:295ms
+2024-05-12T10:22:09.099Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-22-8:339ms
+2024-05-12T10:22:14.141Z: 已完成第6网站:http://alliantenergy.com获取--2024-05-12 18-22-13:365ms
+2024-05-12T10:22:24.145Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-22-23:415ms
+2024-05-12T10:22:28.158Z: 已完成第7网站:http://axa.com.mx获取--2024-05-12 18-22-27:443ms
+2024-05-12T10:22:38.168Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-22-37:494ms
+2024-05-12T10:22:45.785Z: 已完成第8网站:http://tethys-energy.com获取--2024-05-12 18-22-45:536ms
+2024-05-12T10:22:55.791Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-22-55:590ms
+2024-05-12T10:23:07.424Z: 已完成第9网站:http://akkusys.de获取--2024-05-12 18-23-6:653ms
+2024-05-12T10:23:17.429Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-23-16:729ms
+2024-05-12T10:23:23.968Z: 已完成第10网站:http://solardelacuario.com获取--2024-05-12 18-23-23:764ms
+2024-05-12T10:23:33.974Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-23-33:836ms
+2024-05-12T10:23:37.957Z: 已完成第11网站:http://gastec.com获取--2024-05-12 18-23-37:861ms
+2024-05-12T10:23:47.969Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-23-47:906ms
+2024-05-12T10:23:50.504Z: 已完成第12网站:http://firstsolar.com获取--2024-05-12 18-23-49:912ms
+2024-05-12T10:24:00.514Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-23-59:983ms
+2024-05-12T10:24:04.074Z: 已完成第13网站:http://siemens-energy.com获取--2024-05-12 18-24-4:2ms
+2024-05-12T10:24:14.083Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-24-14:80ms
+2024-05-12T10:24:17.532Z: 已完成第14网站:http://orient-power.com获取--2024-05-12 18-24-17:101ms
+2024-05-12T10:24:27.534Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-24-27:154ms
+2024-05-12T10:24:32.011Z: 已完成第15网站:http://agrownomyco.com获取--2024-05-12 18-24-31:176ms
+2024-05-12T10:24:39.752Z: This is  system log,下面是本次(2024-05-12 18-24-39:751ms)系统日志：
+2024-05-12T10:24:41.163Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-40:756ms
+2024-05-12T10:24:42.198Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-41:761ms
+2024-05-12T10:24:42.783Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-42:772ms
+2024-05-12T10:24:43.626Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-42:772ms
+2024-05-12T10:24:44.136Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-43:778ms
+2024-05-12T10:24:45.042Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-44:791ms
+2024-05-12T10:24:47.802Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-47:800ms
+2024-05-12T10:24:48.392Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-47:800ms
+2024-05-12T10:24:48.967Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-48:806ms
+2024-05-12T10:24:49.536Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-48:806ms
+2024-05-12T10:24:50.127Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-49:820ms
+2024-05-12T10:24:50.645Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-49:820ms
+2024-05-12T10:24:51.213Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-50:824ms
+2024-05-12T10:24:51.740Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-50:824ms
+2024-05-12T10:24:52.337Z: jina.ai接口请求失败,ReferenceError: inputText is not defined--2024-05-12 18-24-51:829ms
+2024-05-12T10:25:53.427Z: This is  system log,下面是本次(2024-05-12 18-25-53:426ms)系统日志：
+2024-05-12T10:25:54.857Z: 已完成第1网站:http://sunationsolarsystems.com获取--2024-05-12 18-25-54:429ms
+2024-05-12T10:25:55.122Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-25-54:429ms
+2024-05-12T10:25:55.674Z: 已完成第2网站:http://green-planet-projects.de获取--2024-05-12 18-25-55:442ms
+2024-05-12T10:25:55.743Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-25-55:442ms
+2024-05-12T10:25:56.359Z: 已完成第3网站:http://sunprofit.de获取--2024-05-12 18-25-55:442ms
+2024-05-12T10:25:56.456Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-25-56:450ms
+2024-05-12T10:25:56.986Z: 已完成第4网站:http://aptechnic.com获取--2024-05-12 18-25-56:450ms
+2024-05-12T10:25:57.054Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-25-56:450ms
+2024-05-12T10:25:57.597Z: 已完成第5网站:http://sunset.com获取--2024-05-12 18-25-57:453ms
+2024-05-12T10:25:57.666Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-25-57:453ms
+2024-05-12T10:25:58.356Z: 已完成第6网站:http://alliantenergy.com获取--2024-05-12 18-25-57:453ms
+2024-05-12T10:25:58.427Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-25-57:453ms
+2024-05-12T10:26:01.354Z: 已完成第7网站:http://axa.com.mx获取--2024-05-12 18-26-0:495ms
+2024-05-12T10:26:01.422Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-26-0:495ms
+2024-05-12T10:26:02.017Z: 已完成第8网站:http://tethys-energy.com获取--2024-05-12 18-26-1:496ms
+2024-05-12T10:26:02.120Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-26-1:496ms
+2024-05-12T10:26:02.903Z: 已完成第9网站:http://akkusys.de获取--2024-05-12 18-26-2:496ms
+2024-05-12T10:26:02.971Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-12 18-26-2:496ms
+2024-05-12T16:39:41.294Z: This is  system log,下面是本次(2024-05-13 0-39-41:292ms)系统日志：
+2024-05-12T16:39:41.334Z: 工作表1存在,表名不存在,新建立工作表--2024-05-13 0-39-41:292ms
+2024-05-12T16:39:41.341Z: 工作表2在,表名2024-05-13不存在,新建立工作表--2024-05-13 0-39-41:292ms
+2024-05-12T16:39:48.303Z: 已完成第1网站:http://jelec.com获取--2024-05-13 0-39-47:334ms
+2024-05-12T16:40:05.634Z: 已完成第1网站:http://jelec.com分析--2024-05-13 0-40-5:478ms
+2024-05-12T16:45:46.526Z: This is  system log,下面是本次(2024-05-13 0-45-46:526ms)系统日志：
+2024-05-12T16:45:47.931Z: 已完成第1网站:http://jelec.com获取--2024-05-13 0-45-47:537ms
+2024-05-12T16:45:55.314Z: 已完成第1网站:http://jelec.com分析--2024-05-13 0-45-54:583ms
+2024-05-12T16:46:00.603Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-13 0-45-59:612ms
+2024-05-12T16:46:04.208Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-13 0-46-3:634ms
+2024-05-12T16:46:16.158Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-13 0-46-15:721ms
+2024-05-12T16:46:26.270Z: 已完成第3网站:http://maspvenergy.com分析--2024-05-13 0-46-25:781ms
+2024-05-12T16:46:32.111Z: 已完成第4网站:http://belden.com获取--2024-05-13 0-46-31:831ms
+2024-05-12T16:46:37.882Z: 已完成第4网站:http://belden.com分析--2024-05-13 0-46-36:880ms
+2024-05-12T16:46:48.730Z: 已完成第5网站:http://upsinverter.com获取--2024-05-13 0-46-47:959ms
+2024-05-12T16:49:41.422Z: 已完成第5网站:http://upsinverter.com分析--2024-05-13 0-49-41:196ms
+2024-05-12T16:49:47.345Z: 已完成第6网站:http://cbesolar.de获取--2024-05-13 0-49-47:225ms
+2024-05-12T16:51:56.020Z: 已完成第6网站:http://cbesolar.de分析--2024-05-13 0-51-55:55ms
+2024-05-12T16:51:57.263Z: 已完成第7网站:http://rockwellautomation.com获取--2024-05-13 0-51-57:74ms
+2024-05-12T16:52:15.803Z: 已完成第7网站:http://rockwellautomation.com分析--2024-05-13 0-52-15:192ms
+2024-05-12T16:52:17.694Z: 已完成第8网站:http://trend-energietechnik.de获取--2024-05-13 0-52-17:197ms
+2024-05-12T16:52:55.445Z: 已完成第8网站:http://trend-energietechnik.de分析--2024-05-13 0-52-54:474ms
+2024-05-12T16:52:58.174Z: 已完成第9网站:http://hoppecke.com获取--2024-05-13 0-52-57:499ms
+2024-05-12T16:53:29.925Z: 已完成第9网站:http://hoppecke.com分析--2024-05-13 0-53-29:738ms
+2024-05-12T16:53:32.789Z: 已完成第10网站:http://electricity-today.com获取--2024-05-13 0-53-32:761ms
+2024-05-12T16:55:13.511Z: 已完成第10网站:http://electricity-today.com分析--2024-05-13 0-55-13:420ms
+2024-05-12T16:55:15.214Z: 已完成第11网站:http://stateofgreen.com获取--2024-05-13 0-55-14:422ms
+2024-05-12T16:55:46.971Z: 已完成第11网站:http://stateofgreen.com分析--2024-05-13 0-55-46:665ms
+2024-05-12T16:55:57.917Z: 已完成第12网站:http://sensata.com获取--2024-05-13 0-55-57:758ms
+2024-05-12T16:56:16.335Z: 已完成第12网站:http://sensata.com分析--2024-05-13 0-56-15:884ms
+2024-05-12T16:56:22.078Z: jina.ai接口请求失败,AxiosError: Request failed with status code 422--2024-05-13 0-56-21:927ms
+2024-05-12T16:56:28.530Z: 已完成第14网站:http://m-battery.nl获取--2024-05-13 0-56-27:974ms
+2024-05-12T16:57:28.112Z: 已完成第14网站:http://m-battery.nl分析--2024-05-13 0-57-27:290ms
+2024-05-12T16:57:31.587Z: jina.ai接口请求失败,AxiosError: Request failed with status code 500--2024-05-13 0-57-31:313ms
+2024-05-12T16:57:35.679Z: 已完成第16网站:http://apsystems.com获取--2024-05-13 0-57-35:356ms
+2024-05-12T17:00:15.223Z: 已完成第16网站:http://apsystems.com分析--2024-05-13 1-0-14:458ms
+2024-05-12T17:00:17.696Z: 已完成第17网站:http://pvenergy.it获取--2024-05-13 1-0-17:464ms
+2024-05-12T17:00:28.170Z: 已完成第17网站:http://pvenergy.it分析--2024-05-13 1-0-27:538ms
+2024-05-12T17:00:32.856Z: 已完成第18网站:http://saftbatteries.com获取--2024-05-13 1-0-32:582ms
+2024-05-12T17:01:20.475Z: 已完成第18网站:http://saftbatteries.com分析--2024-05-13 1-1-19:967ms
+2024-05-12T17:01:31.103Z: 已完成第19网站:http://mustpower.com获取--2024-05-13 1-1-31:65ms
+2024-05-12T17:01:45.311Z: 已完成第19网站:http://mustpower.com分析--2024-05-13 1-1-45:173ms
+2024-05-12T17:01:54.764Z: 已完成第20网站:http://firestonecompleteautocare.com获取--2024-05-13 1-1-54:226ms
+2024-05-12T17:03:36.607Z: 已完成第20网站:http://firestonecompleteautocare.com分析--2024-05-13 1-3-36:33ms
+2024-05-12T17:03:49.200Z: 已完成第21网站:http://dragonflyenergy.com获取--2024-05-13 1-3-49:151ms
+2024-05-12T17:04:27.369Z: 已完成第21网站:http://dragonflyenergy.com分析--2024-05-13 1-4-26:432ms
+2024-05-12T17:04:30.960Z: 已完成第22网站:http://theblueground.com获取--2024-05-13 1-4-30:452ms
+2024-05-12T17:05:36.937Z: 已完成第22网站:http://theblueground.com分析--2024-05-13 1-5-36:886ms
+2024-05-12T17:05:44.855Z: 已完成第23网站:http://belectric.com获取--2024-05-13 1-5-43:937ms
+2024-05-12T17:06:45.694Z: 已完成第23网站:http://belectric.com分析--2024-05-13 1-6-45:381ms
+2024-05-12T17:07:11.150Z: 已完成第24网站:http://eastluxenergy.com获取--2024-05-13 1-7-10:555ms
+2024-05-12T17:07:30.080Z: 已完成第24网站:http://eastluxenergy.com分析--2024-05-13 1-7-29:690ms
+2024-05-12T17:07:35.575Z: 已完成第25网站:http://kwpenergiasolar.com.br获取--2024-05-13 1-7-34:708ms
+2024-05-12T17:08:33.491Z: 已完成第25网站:http://kwpenergiasolar.com.br分析--2024-05-13 1-8-33:168ms
+2024-05-12T17:08:47.904Z: 已完成第26网站:http://mirasolsolar.com获取--2024-05-13 1-8-47:298ms
+2024-05-12T17:11:13.510Z: 已完成第26网站:http://mirasolsolar.com分析--2024-05-13 1-11-13:382ms
+2024-05-12T17:11:18.624Z: 已完成第27网站:http://energiasolarlevante.com获取--2024-05-13 1-11-18:424ms
+2024-05-12T17:14:06.391Z: This is  system log,下面是本次(2024-05-13 1-14-6:390ms)系统日志：
+2024-05-12T17:14:08.248Z: 已完成第1网站:http://jelec.com获取--2024-05-13 1-14-7:398ms
+2024-05-12T17:14:27.146Z: 已完成第1网站:http://jelec.com分析--2024-05-13 1-14-26:537ms
+2024-05-12T17:14:32.527Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-13 1-14-31:562ms
+2024-05-12T17:14:51.482Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-13 1-14-50:707ms
+2024-05-12T17:15:05.594Z: 已完成第3网站:http://maspvenergy.com获取--2024-05-13 1-15-4:796ms
+2024-05-12T17:15:55.821Z: 已完成第3网站:http://maspvenergy.com分析--2024-05-13 1-15-55:170ms
+2024-05-12T17:15:57.389Z: 已完成第4网站:http://belden.com获取--2024-05-13 1-15-57:180ms
+2024-05-12T17:16:15.920Z: 已完成第4网站:http://belden.com分析--2024-05-13 1-16-15:280ms
+2024-05-12T17:16:26.540Z: 已完成第5网站:http://upsinverter.com获取--2024-05-13 1-16-26:348ms
+2024-05-12T17:20:05.538Z: 已完成第5网站:http://upsinverter.com分析--2024-05-13 1-20-4:817ms
+2024-05-12T17:20:21.338Z: 已完成第6网站:http://cbesolar.de获取--2024-05-13 1-20-20:913ms
+2024-05-12T17:22:34.804Z: 已完成第6网站:http://cbesolar.de分析--2024-05-13 1-22-33:828ms
+2024-05-12T17:22:37.556Z: 已完成第7网站:http://rockwellautomation.com获取--2024-05-13 1-22-36:851ms
+2024-05-12T17:22:44.916Z: 已完成第7网站:http://rockwellautomation.com分析--2024-05-13 1-22-44:898ms
+2024-05-12T17:22:50.303Z: 已完成第8网站:http://trend-energietechnik.de获取--2024-05-13 1-22-49:919ms
+2024-05-12T17:23:27.442Z: 已完成第8网站:http://trend-energietechnik.de分析--2024-05-13 1-23-27:158ms
+2024-05-12T17:23:30.793Z: 已完成第9网站:http://hoppecke.com获取--2024-05-13 1-23-30:166ms
+2024-05-12T17:24:07.624Z: 已完成第9网站:http://hoppecke.com分析--2024-05-13 1-24-7:378ms
+2024-05-12T17:24:11.484Z: 已完成第10网站:http://electricity-today.com获取--2024-05-13 1-24-11:405ms
+2024-05-12T19:00:01.412Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-13 3-0-1:358ms
+2024-05-12T23:48:10.087Z: jina.ai接口请求失败,Error: read ECONNRESET--2024-05-13 3-0-2:358ms
+2024-05-12T23:48:16.601Z: 已完成第12网站:http://sensata.com获取--2024-05-13 7-48-16:152ms
+2024-05-12T23:48:24.020Z: 已完成第12网站:http://sensata.com分析--2024-05-13 7-48-23:196ms
+2024-05-12T23:48:28.939Z: jina.ai接口请求失败,AxiosError: Request failed with status code 422--2024-05-13 7-48-28:232ms
+2024-05-13T05:36:53.047Z: This is  system log,下面是本次(2024-05-13 13-36-53:47ms)系统日志：
+2024-05-13T05:37:26.472Z: This is  system log,下面是本次(2024-05-13 13-37-26:472ms)系统日志：
+2024-05-13T05:37:27.773Z: 已完成第1网站:http://jelec.com获取--2024-05-13 13-37-27:477ms
+2024-05-13T12:34:53.441Z: This is  system log,下面是本次(2024-05-13 20-34-53:441ms)系统日志：
+2024-05-13T12:35:42.149Z: This is  system log,下面是本次(2024-05-13 20-35-42:149ms)系统日志：
+2024-05-13T12:35:47.345Z: 已完成第1网站:http://jelec.com获取--2024-05-13 20-35-47:192ms
+2024-05-13T12:35:57.362Z: Error interacting with openChatAPITypeError: Cannot read properties of undefined (reading '0')--2024-05-13 20-35-57:277ms
+2024-05-13T12:36:19.699Z: jina.ai接口请求失败,AggregateError--2024-05-13 20-36-19:493ms
+2024-05-13T12:36:19.715Z: 全部处理完,程序退出！--2024-05-13 20-36-19:493ms
+2024-05-13T12:36:48.839Z: This is  system log,下面是本次(2024-05-13 20-36-48:839ms)系统日志：
+2024-05-13T12:37:11.330Z: jina.ai接口请求失败,AggregateError--2024-05-13 20-37-11:50ms
+2024-05-13T12:37:20.122Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-13 20-37-19:128ms
+2024-05-13T12:37:44.474Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-13 20-37-44:319ms
+2024-05-13T12:37:44.753Z: 全部处理完,程序退出！--2024-05-13 20-37-44:319ms
+2024-05-13T12:45:48.068Z: This is  system log,下面是本次(2024-05-13 20-45-48:66ms)系统日志：
+2024-05-13T12:45:53.602Z: 已完成第1网站:http://jelec.com获取--2024-05-13 20-45-53:123ms
+2024-05-13T12:46:12.757Z: This is  system log,下面是本次(2024-05-13 20-46-12:757ms)系统日志：
+2024-05-13T12:46:12.770Z: 表1文件不存在,新建立表文件--2024-05-13 20-46-12:757ms
+2024-05-13T12:46:12.774Z: 表2文件不存在,新建立表文件--2024-05-13 20-46-12:757ms
+2024-05-13T12:46:17.731Z: 已完成第1网站:http://jelec.com获取--2024-05-13 20-46-16:788ms
+2024-05-13T12:46:34.714Z: 已完成第1网站:http://jelec.com分析--2024-05-13 20-46-33:903ms
+2024-05-13T12:46:52.484Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-13 20-46-52:4ms
+2024-05-13T12:46:56.352Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-13 20-46-56:40ms
+2024-05-13T13:03:55.802Z: This is  system log,下面是本次(2024-05-13 21-3-55:799ms)系统日志：
+2024-05-13T13:03:55.840Z: 工作表1存在,表名不存在,新建立工作表--2024-05-13 21-3-55:799ms
+2024-05-13T13:04:02.026Z: 已完成第1网站:http://jelec.com获取--2024-05-13 21-4-1:847ms
+2024-05-13T13:04:12.173Z: 已完成第1网站:http://jelec.com分析--2024-05-13 21-4-12:103ms
+2024-05-13T13:04:21.808Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-13 21-4-21:158ms
+2024-05-13T13:04:25.489Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-13 21-4-25:198ms
+2024-05-13T13:04:48.161Z: This is  system log,下面是本次(2024-05-13 21-4-48:161ms)系统日志：
+2024-05-13T13:04:48.177Z: 表1文件不存在,新建立表文件--2024-05-13 21-4-48:161ms
+2024-05-13T13:04:48.181Z: 表2文件不存在,新建立表文件--2024-05-13 21-4-48:161ms
+2024-05-13T13:05:10.715Z: jina.ai接口请求失败,AggregateError--2024-05-13 21-5-10:366ms
+2024-05-13T13:05:12.414Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-13 21-5-11:378ms
+2024-05-13T13:05:15.963Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-13 21-5-13:431ms
+2024-05-13T13:06:36.410Z: 工作表2在,表名2024-05-13-21不存在,新建立工作表--2024-05-13 21-6-36:370ms
+2024-05-13T13:06:36.372Z: This is  system log,下面是本次(2024-05-13 21-6-36:370ms)系统日志：
+2024-05-13T13:06:38.321Z: 已完成第1网站:http://jelec.com获取--2024-05-13 21-6-37:378ms
+2024-05-13T13:06:43.229Z: 已完成第1网站:http://jelec.com分析--2024-05-13 21-6-42:413ms
+2024-05-13T13:13:49.501Z: This is  system log,下面是本次(2024-05-13 21-13-49:500ms)系统日志：
+2024-05-13T13:14:21.222Z: This is  system log,下面是本次(2024-05-13 21-14-21:222ms)系统日志：
+2024-05-13T13:14:21.249Z: 表2文件不存在,新建立表文件--2024-05-13 21-14-21:222ms
+2024-05-13T13:14:43.919Z: jina.ai接口请求失败,AggregateError--2024-05-13 21-14-43:399ms
+2024-05-13T13:15:06.268Z: jina.ai接口请求失败,AggregateError--2024-05-13 21-15-5:600ms
+2024-05-13T13:15:06.279Z: 全部处理完,程序退出！--2024-05-13 21-15-5:600ms
+2024-05-13T13:15:37.501Z: This is  system log,下面是本次(2024-05-13 21-15-37:501ms)系统日志：
+2024-05-13T13:15:37.516Z: 表1文件不存在,新建立表文件--2024-05-13 21-15-37:501ms
+2024-05-13T13:15:37.521Z: 表2文件不存在,新建立表文件--2024-05-13 21-15-37:501ms
+2024-05-13T13:15:44.239Z: 已完成第1网站:http://jelec.com获取--2024-05-13 21-15-43:540ms
+2024-05-13T13:15:51.540Z: 已完成第1网站:http://jelec.com分析--2024-05-13 21-15-50:588ms
+2024-05-13T13:16:14.675Z: jina.ai接口请求失败,AggregateError--2024-05-13 21-16-14:92ms
+2024-05-13T13:16:14.695Z: 全部处理完,程序退出！--2024-05-13 21-16-14:92ms
+2024-05-13T13:16:43.880Z: This is  system log,下面是本次(2024-05-13 21-16-43:880ms)系统日志：
+2024-05-13T13:16:45.175Z: 已完成第1网站:http://jelec.com获取--2024-05-13 21-16-44:881ms
+2024-05-13T13:16:50.732Z: 已完成第1网站:http://jelec.com分析--2024-05-13 21-16-49:929ms
+2024-05-13T13:16:58.125Z: 已完成第2网站:http://alpinepowersystems.com获取--2024-05-13 21-16-58:25ms
+2024-05-13T13:17:02.556Z: 已完成第2网站:http://alpinepowersystems.com分析--2024-05-13 21-17-2:81ms

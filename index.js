@@ -21,10 +21,13 @@ const {
 } = require('./outFile'); //保存txt模块
 const interactWithChatGPT = require('./chatAPI');
 const fs = require('fs');
-var outfilePath = 'C:\\Users\\jeking\\Desktop\\AI分析结果\\已识别网站记录.xlsx' //./outExe/已识别网站记录.xlsx'; 
-// var outfilePath = 'C:\\Users\\LYZ\\Desktop\\AI分析结果\\已识别网站记录.xlsx' //C: \\Users\\LYZ\\Desktop\\AI分析结果\\
+// var outfilePath = 'C:\\Users\\jeking\\Desktop\\AI分析结果\\第二批已识别网站记录.xlsx' //./outExe/已识别网站记录.xlsx'; 
+var outPath = 'C:\\Users\\jeking\\Desktop\\AI分析结果\\';
+// var outPath = 'C:\\Users\\LYZ\\Desktop\\AI分析结果\\' //C: \\Users\\LYZ\\Desktop\\AI分析结果\\
+// var outfilePath = 'C:\\Users\\Administrator\\Desktop\\AI分析结果\\已识别网站记录.xlsx' //C: \\Users\\LYZ\\Desktop\\AI分析结果\\
 const myModule = require('./makeExcel');
-
+var outfilePath = outPath + "已识别网站记录.xlsx";
+var outfilePath2 = outPath + "首轮处理失败记录.xlsx";
 // 常量定义
 var today = new Date();
 var year = today.getFullYear();
@@ -92,7 +95,8 @@ function main() { //主方法
     (async () => {
         try {
             // const filePath = "./txt/测试数据.xls"; // 替换为你的Excel文件路径
-            const filePath = "./txt/第三批测试数据0511.xlsx"; // 替换为你的Excel文件路径
+            const filePath = "./dataIn/第二批测试数据.xlsx"; // 替换为你的Excel文件路径
+            // const filePath = "./dataIn/第三批测试数据0511.xlsx"; // 替换为你的Excel文件路径
             const data = await readExcelFile(filePath);
             console.log("表格数据:", data[0], data.length); // 输出Excel表格中的数据
             url2 = data[0][1]
@@ -101,13 +105,14 @@ function main() { //主方法
             iterateArray(myArray, () => {
                 // console.log('全部处理完.');
                 // console.log("excledata", excledata, filePath, worksheetName);
-                const worksheetName = fullDate;
+                // const worksheetName = fullDate;  //dayHour
+                const worksheetName = dayHour;
                 appendToExcel(outfilePath, worksheetName, excledata); //把处理完成的结果追加到表格
                 today = new Date();
                 milliseconds = today.getMilliseconds();
                 // console.log("dayHour:", dayHour)
                 if (Failed.length !== 0) {
-                    appendToExcel('./outFile/首轮识别失败记录.xlsx', dayHour, Failed); //写出失败记录
+                    appendToExcel(outfilePath2, dayHour, Failed); //写出失败记录
                     generateLog(logFilePath, "全部处理完,程序退出！" + `--${nowTime}`);
                     console.log('首轮分析有部分失败:', Failed);
                 } else {
@@ -118,7 +123,7 @@ function main() { //主方法
                     // 这里是延时后执行的代码
                     console.log('全部处理完,程序退出');
                     process.exit() //结束程序
-                }, 3000); // 1000 毫秒 = 1 秒
+                }, 10000); // 1000 毫秒 = 1 秒
 
             }, url2);
 
@@ -139,7 +144,7 @@ function iterateArray(array, callback, url2) {
     let index = 0;
 
     function next() {
-        if (index < array.length) {
+        if (index < array.length - 541) {
             console.log("等待处理总数量：", array.length - index, url2)
             getJinaApi(array[index], () => {
                 index++;
@@ -220,19 +225,22 @@ function openchatApiPost(text, item, callback, index) {
     // 你的 API 密钥和模型 API 终点（如果需要的话，可以在这里覆盖默认值）  
     const apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijk1YTBlMjIzLWQ0ZGYtNGFkNC1iZjBlLTA3OWIyMTUxYmU5YiJ9.S95yOdHFmevutvd7_w81hBJjA2kKlnAQCdG0b7VwW7s';
     // const modelEndpoint = 'http://127.0.0.1:11435/v1/chat/completions';
-    // const modelEndpoint = 'http://127.0.0.1:11434/v1/chat/completions';
+    // const modelEndpoint = 'http://192.168.1.249:11434/v1/chat/completions'; //本地openchat-v3.5-1210
+    const modelEndpoint = 'http://127.0.0.1:11434/v1/chat/completions'; //本地openchat-v3.5-1210
     // const modelEndpoint = 'http://localhost:11434/api/generate';
     // const modelEndpoint = 'http://wk2m6ujhui.tcp01.cn/v1/chat/completions';
-    const modelEndpoint = 'http://192.168.1.254:11433/v1/chat/completions'; //254 内必须映射11434到11433，ollama不直接对127.0.0.1之外的来访者提供服务
+    // const modelEndpoint = 'http://192.168.1.254:11433/v1/chat/completions'; //254 内必须映射11434到11433，ollama不直接对127.0.0.1之外的来访者提供服务
 
     // 输入文本  
-    var inputText = qusetion + text;
-    // console.log(inputText)
-    const modelName = 'openchat:7b-v3.5-q6_K';
-    // const modelName = 'openchat:7b-v3.5-1210';
+    var chatApiInputText = qusetion + text; //inputText
+    // console.log("inputText:", chatApiInputText)
+    // const modelName = 'openchat:7b-v3.5-q6_K';
+    const modelName = 'openchat:7b-v3.5-1210';
     // const modelName = 'llama3';
     // 调用函数并处理响应  
-    interactWithChatGPT(inputText, apiKey, modelEndpoint, modelName)
+    const LabelTag = "原表没有相关属性";
+    console.log("开始第", index + 1, "个网站", item[1] + "分析...");
+    interactWithChatGPT(chatApiInputText, apiKey, modelEndpoint, modelName)
         .then(response => {
             // console.log(response);
             // 注意：'choices' 和 'message' 取决于实际 API 响应结构  
@@ -245,16 +253,16 @@ function openchatApiPost(text, item, callback, index) {
                 generateLog(logFilePath, "已完成第" + `${index + 1}` + "网站:" + `${item[1]}` + "分析" + `--${nowTime}`);
                 var array = [],
                     array2 = [];
-                array.splice(0, 0, item[0] || '没有数据');
-                array.splice(1, 0, item[1] || '没有数据');
+                array.splice(0, 0, item[0] || LabelTag);
+                array.splice(1, 0, item[1] || LabelTag);
                 if (response.choices[0].message.content === " 1") {
-                    array.splice(2, 0, item[3] || '没有数据');
+                    array.splice(2, 0, item[3] || LabelTag);
                     array.splice(3, 0, '是');
                     array.splice(4, 0, ''); //如果后面要追加数据，前面需要先追加
 
 
                 } else if (response.choices[0].message.content === " 0") { //
-                    array.splice(2, 0, '');
+                    array.splice(2, 0, item[3] || LabelTag);
                     array.splice(3, 0, '非');
                     array.splice(4, 0, "");
 
@@ -264,11 +272,11 @@ function openchatApiPost(text, item, callback, index) {
                     array.splice(3, 0, '!!');
                     array.splice(4, 0, webState);
                     // 异常的数据加入另外表格临时缓存
-                    array2.splice(0, 0, item[0] || '没有数据');
-                    array2.splice(1, 0, item[1] || '没有数据');
-                    array2.splice(2, 0, item[2] || '没有数据');
-                    array2.splice(3, 0, item[3] || '没有数据');
-                    array2.splice(4, 0, '首轮识别失败！'); //取代原来的是非显示
+                    array2.splice(0, 0, item[0] || LabelTag);
+                    array2.splice(1, 0, item[1] || LabelTag);
+                    array2.splice(2, 0, item[2] || LabelTag);
+                    array2.splice(3, 0, item[3] || LabelTag);
+                    array2.splice(4, 0, '首轮分析失败！'); //取代原来的是非显示
                     Failed.push(array2);
                     // console.log("Failed:", Failed);
 
@@ -329,8 +337,10 @@ function openchatApiPost(text, item, callback, index) {
 // 调用异步函数，并在完成后打印结果  
 var options = {
     outfilePath: outfilePath,
+    outfilePath2: outfilePath2,
     nowTime: nowTime,
-    fullDate: fullDate
+    fullDate: fullDate,
+    dayHour: dayHour
 }; // 创建一个包含 file 属性的对象   
 myModule.asyncFunction('data to process', options, function (err, result) {
     if (err) {
