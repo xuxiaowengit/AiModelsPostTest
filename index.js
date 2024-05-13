@@ -121,7 +121,7 @@ function main() { //主方法
 
                 setTimeout(function () {
                     // 这里是延时后执行的代码
-                    console.log('全部处理完,程序退出');
+                    console.log('全部处理完' + `,分析模型为:${modelName}` + '程序退出');
                     process.exit() //结束程序
                 }, 10000); // 1000 毫秒 = 1 秒
 
@@ -163,7 +163,7 @@ function iterateArray(array, callback, url2) {
 function getJinaApi(item, callback, url2, index, item) {
     // 使用GET请求url1+url2
     var url3 = url1 + url2;
-    console.log('开始处理第:', index + 1, '网站,Url3:', url3)
+    console.log('开始处理第:', index + 1, '网站,Url3:', url3, `,分析模型为:` + modelName)
     httpClient.get(url3, {
         null: ""
     })
@@ -212,6 +212,9 @@ function getJinaApi(item, callback, url2, index, item) {
 
 // 处理结果缓存表格
 var excelData = [];
+const modelName = 'openchat:7b-v3.5-1210';
+// const modelName = 'openchat:7b-v3.5-q6_K';
+// const modelName = 'llama3';
 // openchatAI请求识别
 function openchatApiPost(text, item, callback, index) {
     // console.log("CCl:", "./txt/" + item[0] + ".txt")
@@ -234,9 +237,7 @@ function openchatApiPost(text, item, callback, index) {
     // 输入文本  
     var chatApiInputText = qusetion + text; //inputText
     // console.log("inputText:", chatApiInputText)
-    // const modelName = 'openchat:7b-v3.5-q6_K';
-    const modelName = 'openchat:7b-v3.5-1210';
-    // const modelName = 'llama3';
+
     // 调用函数并处理响应  
     const LabelTag = "原表没有相关属性";
     console.log("开始第", index + 1, "个网站", item[1] + "分析...");
