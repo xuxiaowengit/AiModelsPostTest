@@ -95,8 +95,8 @@ function main() { //主方法
     (async () => {
         try {
             // const filePath = "./txt/测试数据.xls"; // 替换为你的Excel文件路径
-            const filePath = "./dataIn/第二批测试数据.xlsx"; // 替换为你的Excel文件路径
-            // const filePath = "./dataIn/第三批测试数据0511.xlsx"; // 替换为你的Excel文件路径
+            // const filePath = "./dataIn/第二批测试数据.xlsx"; // 替换为你的Excel文件路径
+            const filePath = "./dataIn/第三批测试数据0511.xlsx"; // 替换为你的Excel文件路径
             const data = await readExcelFile(filePath);
             console.log("表格数据:", data[0], data.length); // 输出Excel表格中的数据
             url2 = data[0][1]
